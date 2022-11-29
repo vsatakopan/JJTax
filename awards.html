@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>One Stop Solution for all your Tax needs | JJ Tax</title>
+    <link href="./public/img/logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/scrmob.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script>
+      function disbtn() {
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+    </script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a href="index.html"><img class="logo-display navbar-brand img-fluid" src="public/img/jjtax-logo.png" alt="JJTax" ></a>
+            <button class="navbar-toggler ms-auto ms-sm-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="align-items: right;">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="menu-display">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Company</a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="awards.html">Media</a></li>
+                        <!--li><hr class="dropdown-divider"></li-->
+                        <li><a class="dropdown-item" href="#">Finmag</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a></li>
+                        <li><a class="dropdown-item" href="investor.html">Investor Relations</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">Insights</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="https://blog.jjfintax.com/">Blogs</a></li>
+                          <li><a class="dropdown-item" href="news.html">News & Update</a></li>
+                          <!--li><hr class="dropdown-divider"></li-->
+                          <li><a class="dropdown-item" href="taxcalendar.html">Tax Calendar</a></li>
+                          <li><a class="dropdown-item" href="taxtips.html">Tax Tips</a></li>
+                        </ul>
+                    </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Income Tax</a></li>
+                      <li><a class="dropdown-item" href="#">GST</a></li>
+                      <!--li><hr class="dropdown-divider"></li-->
+                      <li><a class="dropdown-item" href="#">TDS</a></li>
+                      <li><a class="dropdown-item" href="#">Tax Planning</a></li>
+                      <li><a class="dropdown-item" href="#">Accounting</a></li>
+                      <li><a class="dropdown-item" href="#">Startup Services</a></li>
+                      <li><a class="dropdown-item" href="#">ROC Compliances</a></li>
+                      <li><a class="dropdown-item" href="#">Wealth Management</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact</a>
+                   </li>
+                </ul>          
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="sticky-icon is-hidden-mobile">
+          <a href="https://www.linkedin.com/company/jj-tax/" class="social-media-color"><i class="fab fa-linkedin"> </i> LinkedIN </a>
+          <a href="https://www.instagram.com/jjfintax/" class="social-media-color"><i class="fab fa-instagram"></i> Instagram </a>
+          <a href="https://www.facebook.com/JJ-Tax-102265144737511" class="social-media-color"><i class="fab fa-facebook-f"> </i> Facebook </a>
+          <a href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA" class="social-media-color"><i class="fab fa-youtube"></i> Youtube </a>
+          <a href="https://twitter.com/JJTaxApp" class="social-media-color"><i class="fab fa-twitter"> </i> Twitter </a>
+          <a href="#" class="social-media-color"><i class="fab fa-spotify"> </i> Spotify </a>
+        </div>
+        <div class="ticker-wrapper-h">
+            <div class="heading">JJTax News</div>
+                  <ul class="news-ticker-h">
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Due date for TDS returns (Form 26Q) extended to 30th November 2022</a></li>
+                    <li><a href="">11 Nov 2022: Due date for furnishing monthly GSTR 1</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush </a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app </a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Due date for TDS returns (Form 26Q) extended to 30th November 2022</a></li>
+                    <li><a href="">11 Nov 2022: Due date for furnishing monthly GSTR 1</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Due date for TDS returns (Form 26Q) extended to 30th November 2022</a></li>
+                    <li><a href="">11 Nov 2022: Due date for furnishing monthly GSTR 1</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                  </ul>
+                </div>
+              <!--/div>
+            </div>
+          </div-->
+          <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5">Get In Touch</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      Mobile No : +91-9310854724
+                     </div>
+                    <div class="mb-3">
+                      EMail ID : contact@jjfintax.com
+                    </div>
+                    <div class="mb-3">
+                      Address : 234, Tower B-2, Spaze I Tech Park, <br>
+                      Sonha Road, Sector 49, Gurgaon - 122018, Haryana, India
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="formModal" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Come Join JJTax</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="careerForm" name="careerForm" method="post" action="https://submit-form.com/dktfg2z3" onsubmit="disbtn();">
+                    <input type="hidden" name="_redirect" value="https://www.jjfintax.com/success.html" />
+                    <input type="hidden" name="_email.subject" value="New Job Resume" />
+                    <input type="hidden" name="_email.from" value="JJ Tax Site" />
+                    <input type="checkbox" name="_data" style="display:none" tabindex="-1" autocomplete="off" />
+                    <div align="center">Provide us with your details and we'll have a look at it soon.<br><br></div>
+                    <div class="mb-3">
+                      <select id="post" class="form-select">
+                        <option ="Tax_Expert">Apply for Tax Expert</option>
+                        <option ="Tech_Intern">Apply for Tech Intern</option>
+                        <option = "Marketing">Apply for Marketing Expert</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required">
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Your e-Mail" required="required">
+                    </div>
+                    <div class="mb-3">
+                      <input type="number" class="form-control" min=10 id="mobile" name="mobile" placeholder="Mobile" required="required" title="Enter a Valid Mobile Number">
+                    </div>
+                    <div class="mb3">
+                      <!--input type='file' class='form-control' id='file' name="file" placeholder='File' required="required" accept=".doc,.docx,.pdf"-->
+                      <input
+                      type="hidden"
+                      id="document"
+                      name="document"
+                      role="uploadcare-uploader" required="required"
+                      data-public-key="c8128b4ef704e7fe2021"
+                      />
+                    </div>  
+                    <br>
+                    <input type="submit" id="submit_btn" class="btn btn-success" value="Apply Now">
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>                
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-md-12" style="font-family: 'Inter', League Spartan;font-size: 50px;color: #053757;text-align: center;">
+                Awards & Recognition
+              </div>
+            </div>    
+          </div>
+          <div class="container">
+            <div class="row">
+                    <div class="col-md-5">
+                        <div class="grad_2" style="border-radius: 10px;">
+                            <div class="grad_2" align="justify" style="margin-left: 40px;margin-right: 33px;">
+                                <br>
+                                <br>
+                                <font style="font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;">
+                                    <a href="
+                                    https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=newssearch&cd=&cad=rja&uact=8&ved=2ahUKEwj-2o-5rMn7AhXiSWwGHUwZDgoQxfQBKAB6BAgTEAE&url=https%3A%2F%2Fwww.exchange4media.com%2Fannouncements-news%2Fefgh-to-be-jj-taxs-marketing-and-creative-agency-122218.html&usg=AOvVaw1wcVLGRV7CKNSaXXOJnECL">EFGH & JJTax</a>
+                                </font>
+                                <br>
+                            </div>     
+                            <br>
+                            <hr class=" grad_2" style="margin-left: 40px;margin-right: 33px;">
+                            <br>
+                            <div class="grad_2" align="justify" style="margin-left: 40px;margin-right: 33px;">
+                              <font style="font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=newssearch&cd=&cad=rja&uact=8&ved=2ahUKEwjLitfMrMn7AhU1ZWwGHb92AB84ChDF9AEoAHoECA8QAQ&url=https%3A%2F%2Fwww.aninews.in%2Fnews%2Fbusiness%2Fbusiness%2Fjj-tax-app-crosses-milestone-of-1-million-downloads20210802135534&usg=AOvVaw2je9Fsw-32EPQsqZnQCvDa"> JJTax & App Downloads</a>
+                            </font>    
+                            </div>
+                            <br>
+                            <hr class=" grad_2" style="margin-left: 40px;margin-right: 33px;">
+                            <div class="grad_2" align="justify" style="margin-left: 40px;margin-right: 33px;">
+                              <br>
+                                <font style="font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;">
+                                    <a href="https://theprint.in/ani-press-releases/jj-tax-app-scripts-success-with-8-5-lakh-subscribers-within-1-year/665761/">JJTax & Subscribers</a>
+                                </font>
+                            </div>
+                            <br>
+                            <hr class=" grad_2" style="margin-left: 40px;margin-right: 33px;">                            
+                            <div class="grad_2" align="justify" style="margin-left: 40px;margin-right: 33px;">
+                                <br>
+                                <font style="font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;">
+                                   <a href="https://m.dailyhunt.in/news/india/english/the+print-epaper-theprint/the+winners+of+business+mints+nationwide+awards+under+30+rising+entrepreneurs+2022-newsid-n359794820?s=a&uu=0xa30b05bd563f40e2&ss=wsp">Business Mint Awards</a>
+                                </font>   
+                            </div>     
+                            <br>
+                            <hr class=" grad_2" style="margin-left: 40px;margin-right: 33px;">
+                            <br>
+                            <div class="grad_2" align="justify" style="margin-left: 40px;margin-right: 33px;">
+                                <font style="font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;">
+                                    <a href="https://www.business-standard.com/content/press-releases-ani/the-winners-of-business-mint-s-nationwide-awards-under-30-rising-entrepreneurs-2022-122021600801_1.html">Under  30 Rising Entrepreneurs - 2022 </a>
+                                </font>
+                            </div>
+                            <br>     
+                            <div class="cols">
+                              <img src="./public/img/rashi_office.png" width="172px" height="150px">
+                              <img src="./public/img/certificate.png" width="172px" height="150px">
+                              <img src="./public/img/group.png" width="172px" height="150px">
+                      </div>
+                            <hr class=" grad_2" style="margin-left: 40px;margin-right: 33px;">
+                        </div>
+                    </div>
+                    <div class="col-md-4" align="center">
+                        <img src="./public/img/icon_award.png" width="250px" height="360.77"><br><br>
+                        <img src="./public/img/under_forty.png" width="250px" height="353.98">
+                    </div>
+                    <div class="col-md-3" align="center">
+                        <img src="./public/img/leesha_under_30.png" width="225px" height="159.1"><br><br>
+                        <img src="./public/img/leesha_nation.png" width="225px" height="159.1"><br><br>
+                        <img src="./public/img/rashi_nation.png" width="225px" height="159.1"><br><br>
+                        <img src="./public/img/rashi_under_40.png" width="225px" height="159.1"><br><br>
+                    </div>
+             </div>    
+          </div>
+       <!--div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                    <img src="./public/img/rashi_office.png" width="200px" height="150px">
+                    <img src="./public/img/certificate.png" width="200px" height="150px">
+                    <img src="./public/img/group.png" width="200px" height="150px">
+            </div>
+        </div>
+       </div-->
+       <footer   style="background-color: #053757;">
+        <div class="container py-5">
+          <div class="row row-no-gutters">
+            <div class="col" >
+              <form action="https://submit-form.com/opqN35DN">
+                <input type="hidden" name="_redirect" value="https://blog.jjfintax.com/archive" />
+                <div class="control is-size-5-mobile">
+                    <input type="email" id="email" name="email" aria-label="email" 
+                        placeholder="name@example.com" required="required" style="width:290px; height:51px;border-radius: 7px; font-family: 'Inter', Poppins;font-size: 20px;color:#cdcdcd; text-align: center;">
+                </div>
+                <div class="control is-size-5-mobile" style="padding-top: 0.75rem;">
+                    <button align="center" class="footer-input" type="submit" style="width:290px; height:51px;border-radius: 7px;font-family: 'Inter', Poppins;font-size: 20px; border-color: #6aa9d5;background-color: #6aa9d5; color: #ffffff;">
+                      Stay Updated
+                    </button>
+                </div>
+              </form>
+              <p align="center" class="is-size-7" style="padding-top: 0.25rem; color:white">
+                  Two insightful newsletter every week.
+              </p>
+              <div>
+                <a href="https://play.google.com/store/apps/details?id=com.jjtax.app"><img src="./public/img/playstore.png" width="129px" height="52.5px" alt="JJ Tax APP/Play Store"></a>
+                <a href="https://jjtax.onelink.me/LXJ6/a8575660"><img src="./public/img/appstore.png" width="133.5px" height="52.5px" alt="JJ Tax APP/App Store"> </a>
+            </div>    
+            </div>
+            <div class="col">
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Services</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="#">Income Tax</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">GST</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">TDS</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Tax Planning</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Accounting</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Startup Service</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">ROC Compliances</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Wealth Management</a></li>
+              </ul>
+            </div>              
+            <div class="col">
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Other Services</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="#">Legal Services</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Firm Incorporation</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">HRA Calculator</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">NRI Services</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">DSC</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Reply to Notice</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">PAN</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Aadhar-PAN link</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">RBI/FEMA compliances</a></li>
+              </ul>
+            </div>
+            <div class="col" >
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Company</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="aboutus.html">About Us</a></li>
+                <li class="footer-font-info"><a class="active-link" href="awards.html">Media</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Finmag</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a></li>
+                <li class="footer-font-info"><a class="footer-font-info"><a class="active-link" href="investor.html">Investor Relations</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Other Links</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="#">FAQs</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">T&C</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Privacy Policy</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Gallery</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h6 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>JJ Capsule</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="https://blog.jjfintax.com">Blogs</a></li>
+                <li class="footer-font-info"><a class="active-link" href="news.html">News & Updates</a></li>
+                <li class="footer-font-info"><a class="active-link" href="taxcalendar.html">Tax Calendar</a></li>
+                <li class="footer-font-info"><a class="active-link" href="taxtips.html">Tax Tips</a></li>
+                <li class="footer-font-info"><a class="active-link" href="pricing.html"><b>Pricing</b></a></li>
+                <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact Us</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </html>

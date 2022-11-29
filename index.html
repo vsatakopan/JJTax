@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Solution for all your Tax needs | JJ Tax</title>
+    <meta name="description"
+        content="We understand the importance of getting queries answered in real-time and that's what we pledge to excel. Download our app now to get all your tax-related queries answered by our chat experts.">
+    <link rel="canonical" href="https://jjfintax.com">
+
+    <link href="./public/img/logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/scrmob.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/micro-slider.min.js"></script>
+    <script src="./public/js/hammer.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => 
+      {
+      	const __ms = document.querySelector('.micro-slider');
+        const __msSlider = new MicroSlider(__ms, { indicators: true, indicatorText: '' });
+        const hammer = new Hammer(__ms);
+	      const __msTimer = 2000;
+        let __msAutoplay = setInterval(() => __msSlider.next(), __msTimer);
+        __ms.onmouseenter = function(e) {
+        clearInterval(__msAutoplay); 
+       }
+      __ms.onmouseleave = function(e) {
+       clearInterval(__msAutoplay); 
+      __msAutoplay = setInterval(() => __msSlider.next(), __msTimer);
+      }
+      __ms.onclick = function(e) {
+       clearInterval(__msAutoplay); 
+      } 
+     hammer.on('tap', function(e) {
+      clearInterval(__msAutoplay);
+     });
+     hammer.on('swipe', function(e) {
+      clearInterval(__msAutoplay); 
+      __msAutoplay = setInterval(() => __msSlider.next(), __msTimer);
+    });
+    let slideLink = document.querySelectorAll('.slider-item');
+    if (slideLink && slideLink !== null && slideLink.length > 0){
+      slideLink.forEach( el => el.addEventListener('click', e => {
+      e.preventDefault();
+     let href = el.dataset.href;
+     let target = el.dataset.target;
+     if (href !== '#') window.open(href, target);
+     }));
+    }
+    function disbtn() {
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+  });
+    </script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a href="index.html"><img class="logo-display navbar-brand img-fluid" src="public/img/jjtax-logo.png" alt="JJTax" ></a>
+            <button class="navbar-toggler ms-auto ms-sm-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="align-items: right;">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="menu-display">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Company</a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="awards.html">Media</a></li>
+                        <!--li><hr class="dropdown-divider"></li-->
+                        <li><a class="dropdown-item" href="#">Finmag</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a></li>
+                        <li><a class="dropdown-item" href="investor.html">Investor Relations</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">Insights</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="https://blog.jjfintax.com/">Blogs</a></li>
+                          <li><a class="dropdown-item" href="news.html">News & Update</a></li>
+                          <!--li><hr class="dropdown-divider"></li-->
+                          <li><a class="dropdown-item" href="taxcalendar.html">Tax Calendar</a></li>
+                          <li><a class="dropdown-item" href="taxtips.html">Tax Tips</a></li>
+                        </ul>
+                    </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Income Tax</a></li>
+                      <li><a class="dropdown-item" href="#">GST</a></li>
+                      <!--li><hr class="dropdown-divider"></li-->
+                      <li><a class="dropdown-item" href="#">TDS</a></li>
+                      <li><a class="dropdown-item" href="#">Tax Planning</a></li>
+                      <li><a class="dropdown-item" href="#">Accounting</a></li>
+                      <li><a class="dropdown-item" href="#">Startup Services</a></li>
+                      <li><a class="dropdown-item" href="#">ROC Compliances</a></li>
+                      <li><a class="dropdown-item" href="#">Wealth Management</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact</a>
+                   </li>
+                </ul>          
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="sticky-icon is-hidden-mobile">
+          <a href="https://www.linkedin.com/company/jj-tax/" class="social-media-color"><i class="fab fa-linkedin"> </i> LinkedIN </a>
+          <a href="https://www.instagram.com/jjfintax/" class="social-media-color"><i class="fab fa-instagram"></i> Instagram </a>
+          <a href="https://www.facebook.com/JJ-Tax-102265144737511" class="social-media-color"><i class="fab fa-facebook-f"> </i> Facebook </a>
+          <a href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA" class="social-media-color"><i class="fab fa-youtube"></i> Youtube </a>
+          <a href="https://twitter.com/JJTaxApp" class="social-media-color"><i class="fab fa-twitter"> </i> Twitter </a>
+          <a href="#" class="social-media-color"><i class="fab fa-spotify"> </i> Spotify </a>
+        </div>
+        <div class="ticker-wrapper-h">
+            <div class="heading">JJTax News</div>
+                  <ul class="news-ticker-h">
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Due date for TDS returns (Form 26Q) extended to 30th November 2022</a></li>
+                    <li><a href="">11 Nov 2022: Due date for furnishing monthly GSTR 1</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush </a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app </a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Due date for TDS returns (Form 26Q) extended to 30th November 2022</a></li>
+                    <li><a href="">11 Nov 2022: Due date for furnishing monthly GSTR 1</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href="">Pay your Advance Tax through JJ Tax App</a></li>
+                    <li><a href="">Due date for TDS returns (Form 26Q) extended to 30th November 2022</a></li>
+                    <li><a href="">11 Nov 2022: Due date for furnishing monthly GSTR 1</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">Save Taxes and File your Returns with JJ TAX</a></li>
+                    <li><a href="">For faster Refunds , file returns with JJ TAX</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">E-verify ITR within 30 days</a></li>
+                    <li><a href="">Save Tax with JJ Tax</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                  </ul>
+                </div>
+              <!--/div>
+            </div>
+          </div-->
+          <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5">Get In Touch</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      Mobile No : +91-9310854724
+                     </div>
+                    <div class="mb-3">
+                      EMail ID : contact@jjfintax.com
+                    </div>
+                    <div class="mb-3">
+                      Address : 234, Tower B-2, Spaze I Tech Park, <br>
+                      Sonha Road, Sector 49, Gurgaon - 122018, Haryana, India
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="formModal" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Come Join JJTax</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="careerForm" name="careerForm" method="post" action="https://submit-form.com/dktfg2z3" onsubmit="disbtn();">
+                    <input type="hidden" name="_redirect" value="https://www.jjfintax.com/success.html" />
+                    <input type="hidden" name="_email.subject" value="New Job Resume" />
+                    <input type="hidden" name="_email.from" value="JJ Tax Site" />
+                    <input type="checkbox" name="_data" style="display:none" tabindex="-1" autocomplete="off" />
+                    <div align="center">Provide us with your details and we'll have a look at it soon.<br><br></div>
+                    <div class="mb-3">
+                      <select id="post" class="form-select">
+                        <option ="Tax_Expert">Apply for Tax Expert</option>
+                        <option ="Tech_Intern">Apply for Tech Intern</option>
+                        <option = "Marketing">Apply for Marketing Expert</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required">
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Your e-Mail" required="required">
+                    </div>
+                    <div class="mb-3">
+                      <input type="number" class="form-control" min=10 id="mobile" name="mobile" placeholder="Mobile" required="required" title="Enter a Valid Mobile Number">
+                    </div>
+                    <div class="mb3">
+                      <!--input type='file' class='form-control' id='file' name="file" placeholder='File' required="required" accept=".doc,.docx,.pdf"-->
+                      <input
+                      type="hidden"
+                      id="document"
+                      name="document"
+                      role="uploadcare-uploader" required="required"
+                      data-public-key="c8128b4ef704e7fe2021"
+                      />
+                    </div>  
+                    <br>
+                    <input type="submit" id="submit_btn" class="btn btn-success" value="Apply Now">
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>                
+              </div>
+            </div>
+          </div>         
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="is-size-3 is-size-3-mobile" style="font-family: 'Inter', League Spartan;font-size: 30px;color: #053575;">
+                  <br>
+                  <b>JJ Tax App. Where only CAs do what CAs should.</b>
+                </div>
+                <div class="is-size-5 is-size-5-mobile" style="font-family: 'Inter', League Spartan;font-size: 30px;">
+                  <br><b>Filing Tax Returns | GST Returns | TDS Filing | Accounting | StartUp Services | Compliances & More</b>
+                </div>
+                <div class="is-size-6 is-size-6-mobile">
+                  <br>
+                  <img alt="right" src="public/img/checkmark.png" style="width: 20px; height: 22px;"/>
+                    Ease and speed of digitizing your business & financial needs
+                </div>
+                <div class="is-size-6 is-size-6-mobile">
+                  <img alt="right" src="public/img/checkmark.png" style="width: 20px; height: 22px;"/>
+                  Experience of over 40 years of professional Chartered Accountants
+              </div>
+              <div class="is-size-6 is-size-6-mobile">
+                <img alt="right" src="public/img/checkmark.png" style="width: 20px; height: 22px;"/>
+                Error-free filing and due diligence.
+            </div>
+            <div class="is-size-6 is-size-6-mobile">
+                <img alt="right" src="public/img/checkmark.png" style="width: 20px; height: 22px;"/>
+                  Experts in making everyone fully compliant in the financial world
+            </div>            
+      <div class="is-size-5 is-size-5-mobile">
+              <br><b>Plans start at just Rs <span class="strikediag">699</span><b> 499</b> per year.</b>
+          </div>
+          <div class="is-size-5">
+            <br><h5><span class="badge badge-background border p-2 mb-2 is-size-5-mobile">DOWNLOAD NOW</span>        
+              <a class="is-primary is-hidden-mobile" role="button" onclick="window.fcWidget.open();window.fcWidget.show();">
+                <span class="badge badge-background-1 border border-info p-2 mb-2 is-hidden-mobile">Talk to an expert</span>
+              </a>  
+          </h5>
+      </div>
+    </div>
+  </div>
+</div>    
+<div class="grad_1 w-100" style="padding-top: 1.5rem;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <b style="align-items: center;font-family: 'Inter', League Spartan;font-size: 40px;color: #053757"><div align="center">Services</div></b>
+        <b style="align-items: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053757"><div align="center">Financial matters are best left to experts.</div></b>
+      </div>
+    </div>
+  </div>
+</div>      
+        <div class="grad_1 w-100">
+          <div class="container" style="padding-top: 1.5rem;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-4 col-md-3">
+                    <!--br><br-->
+                    <!--div class="services-first" style="max-width: 18rem; height: 11rem;">
+                      <div class="card-header">Income Tax</div>
+                        <div style="border-radius: 7px; align-items: center;"-->
+                          <div class="box3" >
+                            <img alt="" src="public/img/income_tax.png"/>
+                            <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                               <div class="description">
+                                  <b>Get your ITR filed in the most accurate manner.</b>
+                                </div>
+                          </div>
+                        </div>
+                  </div>
+                        
+                      <!--/div>
+                    </div>
+                  </div-->
+                  <div class="col-4 col-md-3" >
+                    <!--br><br-->
+                    <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 18rem; height: 11rem;"-->
+                      <!--div class="card-header">GST</div-->
+                        <!--div class="card-body"-->
+                          <div class="box3">
+                             <img alt="" src="public/img/gst.png"/>
+                             <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                               <div class="description">
+                                  <b>GST compliances are now easy peasy with JJ Tax.</b>
+                                </div>
+                          </div>
+                        </div>                    
+                      </div>
+                <!--/div>
+                    </div>              
+                  </div-->
+                  <br>
+                  <div class="col-4 col-md-3">
+                    <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 18rem; height: 11rem;">
+                      <div class="card-header">TDS</div>
+                        <div class="card-body" style="align-items: center;"-->
+                          <div class="box3">
+                            <img alt="" src="public/img/tds.png" />
+                             <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                               <div class="description">
+                                <b>All about TDS. Its applicability, payment and return filing.
+                                  </b>
+                              </div>
+                          </div>
+                        </div> 
+                  </div>                   
+                      <!--/div>
+                    </div>              
+                  </div-->
+                  <br>
+                  <div class="col-4 col-md-3">
+                    <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 18rem; height: 11rem;">
+                      <div class="card-header">Tax Planning</div>
+                        <div class="card-body" style="align-items: center;"-->
+                          <div class="box3">
+                            <img alt="" src="public/img/tax_planning.png"/>
+                             <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                               <div class="description">
+                                 <b>Plan well and Maximise your Tax Savings.</b>
+                               </div>
+                            </div>
+                          </div>            
+                  </div>        
+                </div>
+              </div>     
+                    <!--/div>
+                  </div>                                                    
+                </div>
+              </div-->
+              <!--div class="col-md-6 vertical-center">
+                <div class="is-size-5 is-size-5-mobile">
+                  <b style="align-items: center;font-family: 'Inter', League Spartan;font-size: 40px;color: #053575;"><span class="align-middle">Financial matters are best left to experts.</span></b><br>
+                  <span class="align-middle"></span>See all plans for Individuals</span><br>
+                  <a class="is-primary is-hidden-mobile" role="button" onclick="window.fcWidget.open();window.fcWidget.show();">
+                    <br><span class="badge badge-background-1 align-middle border border-info p-2 mb-2">Talk to an expert</span>
+                  </a>
+                </div>          
+              </div-->
+            </div>
+          </div>
+        </div>
+        <div class="grad_1 w-100">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-4 col-md-3">
+            <!--div class="row">
+              <div class="col-md-6 vertical-center">        
+                <div class="is-size-5 is-size-5-mobile">
+                  <b style="align-items: center;font-family: 'Inter', League Spartan;font-size: 40px;color: #053575;"><span class="align-middle">Financial matters are best left to experts.</span></b><br>
+                  <span class="align-middle"></span>See all plans for Individuals</span><br>
+                    <a class="is-primary is-hidden-mobile" role="button" onclick="window.fcWidget.open();window.fcWidget.show();">
+                      <br><span class="badge badge-background-1 align-middle border border-info p-2 mb-2">Talk to an expert</span>
+                    </a>
+                </div>
+              </div-->
+                    <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 18rem; height: 11rem;">
+                      <div class="card-header">Accounting</div>
+                        <div class="card-body" style="align-items: center;"-->
+                          <div class="box3">
+                            <img alt="" src="public/img/accounting.png"/>
+                             <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                               <div class="description">
+                                <b>Book keeping at the most affordable prices.</b>
+                              </div>
+                          </div>
+                        </div>                    
+                      </div>
+                    <!--/div>
+                  </div-->            
+                  <br>
+                  <div class="col-4 col-md-3">
+                    <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 18rem; height: 11rem;">
+                      <div class="card-header">Startup Services</div>
+                        <div class="card-body" style="align-items: center;"-->
+                          <div class="box3">
+                            <img alt="" src="public/img/startup.png"/>
+                             <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                               <div class="description" align="center">
+                                <b>Register your business in 7 days.</b>
+                                </div>
+                          </div>
+                        </div>                    
+                      </div>
+                    <!--/div>
+                  </div-->
+                  <br>
+                  <div class="col-4 col-md-3">
+                    <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 18rem; height: 11rem;">
+                      <div class="card-header">ROC Compliances</div>
+                        <div class="card-body" style="align-items: center;"-->
+                          <div class="box3">
+                            <img alt="" src="public/img/roc_complainces.png"/>
+                            <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                                <div class="description">
+                                  <b>Never pay Penalty again! Submit your compliances timely</b>
+                                </div>
+                          </div>
+                        </div>                    
+                      </div>
+                    <!--/div>              
+                  </div-->  
+                  <br>
+                  <div class="col-4 col-md-3">
+                    <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 18rem; height: 11rem;">
+                      <div class="card-header">Investment Advisory</div>
+                        <div class="card-body" style="align-items: center;"-->
+                          <div class="box3">
+                            <img alt="" src="public/img/invest_advisory.png"/>
+                            <div class="box-content" style="text-align:justify;display:flex;align-items:center;height:165px;">
+                              <div class="description">
+                                <b>Create your wealth and leave a legacy.</b>
+                              </div>
+                            </div>
+                          </div>                    
+                        </div>
+                      <!--/div>
+                    </div-->
+                  </div>  
+                </div>
+              </div>
+            <!--/div-->
+          </div></div>
+        </div>  
+        <div class="grad_1 w-100" style="padding-top: 1.5rem;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12" style="align-items: center;">
+                <b style="align-items: center;font-family: 'Inter', League Spartan;font-size: 40px;color: #053757"><div align="center"><a href="pricing.html">See all plans</a></div></b>
+                <div align="center">
+                    <a class="is-primary is-hidden-mobile" role="button" onclick="window.fcWidget.open();window.fcWidget.show();">
+                  <br><div class="badge badge-background-1 align-middle border border-info p-3 mb-5" align="center" style="width: 200px;"><font style="font-family: 'Inter', League Spartan;font-size: 20px;color:#6aa9d5;">Talk to an expert</font></div>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>      
+        
+        <br>
+        
+        <div style="font-family: 'Inter', League Spartan;font-size: 32px; text-align: center; color:#000000">
+           <b>12.5 Lakh+ Happy Customers</b>
+        </div>
+        <div class="is-size-5 is-hidden-mobile" align="center">
+          <img class="bandw" src="./public/img/users.png"  width="1350px;">
+        </div>              
+        <!-- Carousel wrapper -->
+        <div id="carouselExampleControls" class="carousel slide carousel-dark is-size-5 is-size-5-mobile" data-bs-ride="carousel">
+        <!-- Controls -->
+          <div class="d-flex justify-content-center mb-4">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>  
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- Inner -->
+          <div class="carousel-inner py-4">
+          <!-- Single item -->
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row row-flex">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Pushvinder Singh</h5>
+                    <p align="center">Individual Tax Payer</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      They are very <span class="shadow" style="color:#6aa9d5">cooperative and professional</span>. They listen to your all queries and respond to you with the <span class="shadow" style="color:#6aa9d5">best advice and immediate action</span> is what I liked the most from their services. They are totally recommended for hassle free services for all your taxation issues.              
+                    </p>
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Amit Nadar</h5>
+                    <p align="center">Individual Tax Payer</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      I have availed their service for 2 years, it has been <span class="shadow" style="color:#6aa9d5">smooth and delightful</span>. Will recommend their services. Thanks to the JJ Tax team.                      
+                    </p>
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star-half-alt fa-sm"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Bhishamkumar Kumar</h5>
+                    <p align="center">Individual Tax Payer</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                        Thanks, JJ Tax for quick and Awesome support 👏 any tax related support guys please reach out to JJ Tax...they are <span class="shadow" style="color:#6aa9d5">too good and very helpful</span>            
+                    </p>
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>      
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Single item -->
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row row-flex">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Ankush Saini</h5>
+                    <p align="center">Individual Tax Payer</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                        JJ Tax app provided me a seamless way to file my income tax returns with their efficient staff for giving a <span class="shadow" style="color:#6aa9d5">great chat experience</span>. Overall, a very useful app and a great one
+                   </p>
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Ricardo Dicosta</h5>
+                    <p align="center">Seller Support at Amazon India</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      Been using JJ Tax for the past 10 months and it has been a <span class="shadow" style="color:#6aa9d5">frictionless journey</span> so far. It has helped me save a ton of time and eased the way I used to <span class="shadow" style="color:#6aa9d5">file my ITR returns</span>. Love the team and highly recommended it.
+                    </p>
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star-half-alt fa-sm"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Rajiv Gupta</h5>
+                    <p align="center">MD at Boston Consulting Group</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      Really trust and appreciate the team behind JJ Tax. The team is <span class="shadow" style="color:#6aa9d5">always eager to help</span> and ready to answer all your queries. They have <span class="shadow" style="color:#6aa9d5">eased my burden of managing my taxes</span> and compliances which was a big problem.</p>
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>    
+            </div>
+            <!-- Single item -->
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row row-flex">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                      <h5 class="mb-3" align="center">Navneet Sinha</h5>
+                      <p align="center">Head of Accounts at Accen Ad Creations</p>
+                      <p class="text-muted content" style="text-align:justify">
+                        <i class="fas fa-quote-left pe-2"></i>
+                          Before JJ Tax we had to run after our CA to get our GST done and hire someone to <span class="shadow" style="color:#6aa9d5">manage our compliances</span>, it was an utter mess for us. Thankfully JJ Tax helped us to make the <span class="shadow" style="color:#6aa9d5">process super friendly</span> and simplified.              
+                      </p>
+                      <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                      </ul>
+                  </div>
+                 <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Rohan Shah</h5>
+                    <p align="center">Individual Tax Payer</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                      It's a very handy app. I immediately get replies to my queries and the tax experts are <span class="shadow" style="color:#6aa9d5">very cooperative.</span> They do their best the help me. I <span class="shadow" style="color:#6aa9d5">highly recommend</span> this app to every taxpayer for their queries and help.              
+                    </p>
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star-half-alt fa-sm"></i></li>
+                    </ul>
+                  </div>
+                 <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Udit Gautam</h5>
+                    <p align="center">Individual Tax Payer</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                        It's the <span class="shadow" style="color:#6aa9d5">Best app.</span> They provide all the services required to pay taxes. The app just got <span class="shadow" style="color:#6aa9d5">one-stop solution</span> for all the CA-related requirements.
+                    </p>  
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    </ul>
+                 </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row row-flex">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Mohit</h5>
+                    <p align="center">Individual Tax Payer</p>
+                    <p class="text-muted content" style="text-align:justify">
+                      <i class="fas fa-quote-left pe-2"></i>
+                        Experts are <span class="shadow" style="color:#6aa9d5">highly knowledgeable</span> and friendly. Also the notification part is really interesting. All the latest updates relating to Income tax, GST etc are updated from time to time. Would <span class="shadow" style="color:#6aa9d5">highly recommend</span> to download the app.
+                    </p>  
+                    <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="fas fa-star fa-sm"></i></li>
+                      <li><i class="far fa-star fa-sm"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <h5 class="mb-3" align="center">Ricardo Dicosta</h5>
+                    <p align="center">Seller Support at Amazon India</p>
+                      <p class="text-muted content" style="text-align:justify">
+                        <i class="fas fa-quote-left pe-2"></i>
+                          Been using JJ Tax for the past 10 months and it has been a <span class="shadow" style="color:#6aa9d5">frictionless journey</span> so far. It has helped me save a ton of time and eased the way I used to <span class="shadow" style="color:#6aa9d5">file my ITR returns</span>. Love the team and highly recommended it.
+                      </p>
+                      <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star-half-alt fa-sm"></i></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                      <h5 class="mb-3" align="center">Rajiv Gupta</h5>
+                      <p align="center">MD at Boston Consulting Group</p>
+                      <p class="text-muted content" style="text-align:justify">
+                        <i class="fas fa-quote-left pe-2"></i>
+                          Really trust and appreciate the team behind JJ Tax. The team is <span class="shadow" style="color:#6aa9d5">always eager to help</span> and ready to answer all your queries. They have <span class="shadow" style="color:#6aa9d5">eased my burden of managing my taxes</span> and compliances which was a big problem.      
+                      </p>
+                      <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star fa-sm"></i></li>
+                        <li><i class="fas fa-star-half-alt fa-sm"></i></li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+        </div>
+        <br><br>
+        <div class="w-100 is-size-5 is-size-5-mobile grad_2">
+          <div class="container">
+          <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+              <br>
+            <br>
+              <b style="text-align: center;font-family: 'Inter', League Spartan;font-size: 32px;color: #1167AF;"> Why Us </b>     
+              <br>
+              <br>
+            </div>
+          </div>
+         </div>
+         <div class="container is-size-5 is-size-5-mobile grad_2 d-flex justify-content-center sections d-inline-block" >
+          <div class="row">
+            <!--div class="col-md-12"-->
+              <div class="col-md-2">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Chat Based</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4">
+                       <img class="bandw" src="public/img/chat_based.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>The future is chat based and we want to bring that experience to your finger tips for all your tax-related concerns.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->
+              <div class="col-md-2 ">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Tax Saving</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4">
+                       <img class="tax-saving bandw" alt="" src="public/img/tax_saving.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                               <b>Worried about meeting financial goals, plan your taxes with tax experts and maximise your refunds.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->              
+              <div class="col-md-2 ">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Secure</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4">
+                       <img class="secure bandw" alt="" src="public/img/secure.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>Security is at the core of JJTax.  We built our own "Secure Digital Cabinet" which you can store all your downloads and documents with ease.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->              
+              <div class="col-md-2 ">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Accurate Filing</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4">
+                       <img class="secure bandw" alt="" src="public/img/accurate_filing.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>Our experts max Tax filing process simple and stress-free for you and strive for 100% accuracy.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->                            
+              <div class="col-md-2 ">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >CA Assistance</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4">
+                       <img class="secure bandw" alt="" src="public/img/ca_assistance.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>The best way to solve all your tax queries, Chat with our experts and get personalised CA Assistance.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->
+              <div class="col-md-2 ">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Affordable</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4">
+                       <img class="secure bandw" alt="" src="public/img/affordable.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>We believe in providing tax sanity to every one and that's the reason we kept the prices competitive and ensured that we have a suitable plan for everyone.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->                                                                      
+            </div>
+          </div>
+        </div>
+                  <div class="w-100 is-size-5 is-size-5-mobile grad_2" >
+                    <div class="container">
+            <div class="row">
+              <div class="col-md-2 is-size-5-mobile">
+                &nbsp;
+              </div>
+              <div class="col-md-2 is-size-5-mobile" align="center">
+                <img src="public/img/lakh.png"/><br>
+                <div align="center">12.7 Lakh+</div>
+                <div align="center">Happy Clients</div>
+              </div>
+              <!--div class="line-div1"></div-->
+              <div class="col-md-4 is-size-5-mobile" align="center">
+                <img src="public/img/query.png"/><br>
+                <div align="center">22 Lakh+</div>
+                <div align="center">Query Resolved</div>
+              </div>
+              <!--div class="line-div2"></div-->
+              <div class="col-md-2 is-size-5-mobile" align="center">
+                <img src="public/img/decade.png"/><br>
+                <div align="center">4 Decade+</div>
+                <div align="center">Experience</div>
+                <br>
+                <br>                                         
+              </div>
+              <div class="col-md-2 is-size-5-mobile">
+                &nbsp;
+              </div>
+            </div>
+         </div>
+         </div>
+         <div class="container is-size-5 is-size-5-mobile" style="margin-top: 2rem;">
+          <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+              <b style="text-align: center;font-family: 'Inter', League Spartan;font-size: 32px;color: #1167AF;"> Other Services </b>     
+            </div>
+          </div>
+         </div>
+         <div class="container is-size-5 is-size-5-mobile" style="margin-top:-3rem;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="micro-slider">
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/pan.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/nri_services.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/dsc.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/hra_calc.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/rbi_fema_compliance.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/legal.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/reply_to_notice.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/aadhar_pan_link.png"></div>
+              <div class="slider-item s" data-href="#" data-target="_blank"><img src="./public/img/company_firm_incorporation.png"></div>
+            </div>
+          </div>
+        </div>    
+      </div>
+    <br><br>
+         <!--div class="container">
+           <div class="row row-flex">
+             <div id ="image-container">
+               <div class="photobanner">
+                 <img src="./public/img/pan.png">
+                 <img src="./public/img/nri_services.png">
+                 <img src="./public/img/dsc.png">
+                 <img src="./public/img/hra_calc.png">
+                 <img src="./public/img/rbi_fema_compliance.png">
+                 <img src="./public/img/legal.png">
+                 <img src="./public/img/reply_to_notice.png">
+                 <img src="./public/img/aadhar_pan_link.png">
+                 <img src="./public/img/company_firm_incorporation.png">
+            </div>
+          </div>
+        </div>
+      </div-->
+      <div class="container is-size-5 is-size-5-mobile">
+        <div class="row">
+              <div class="col-md-12">
+                  <div class="is-size-5">
+                        <h5 align="center"><span class="badge badge-background border p-2 mb-2">DOWNLOAD NOW</span>        
+                          <a class="is-primary is-hidden-mobile" role="button" onclick="window.fcWidget.open();window.fcWidget.show();">
+                            <span class="badge badge-background-1 border border-info p-2 mb-2 is-hidden-mobile">Talk to an expert</span>
+                          </a>  
+                      </h5>
+                  </div>      
+              </div>    
+        </div>   
+    </div>
+      <div class="w-100 is-size-5 is-size-5-mobile" style="margin-top: 1rem; background-color: #F4F4F4;">
+       <div class="container"> 
+        <div class="row">
+          <div class="col-md-12" style="text-align: center;">
+            <br>
+            <br>
+            <b style="text-align: center;font-family: 'Inter', League Spartan;font-size: 32px;color: #053757;"> YOUR SECURITY, OUR PRIORITY </b>     
+          </div>
+        </div>
+       </div>      
+       <div class="container" style="background-color: #F4F4F4;">
+        <div class="row">
+          <div class="col-md-12 is-size-3 is-size-4-mobile has-text-centered">
+            <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 24px;color: #053757;">
+              Safeguarding your data is our duty. We are 100% devoted to protecting our client’s data, and to <br>ensure that we keep a regular check on our systems to avoid vulnerabilities and breaches. Your <br>privacy is our utmost priority. Always
+            </font>     
+          </div>
+          <div class="col-md-6" align="right">
+            <img src="./public/img/ssl_big.png" width="300px;" height="280px">
+          </div>
+          <div class="col-md-6" align="left"> 
+            <img src="./public/img/iso_9001.png" width="300px;" height="280px">
+            <br>
+            <br>
+          </div>
+        </div>
+       </div>      
+      </div>
+      <footer   style="background-color: #053757;">
+        <div class="container py-5">
+          <div class="row row-no-gutters">
+            <div class="col" >
+              <form action="https://submit-form.com/opqN35DN">
+                <input type="hidden" name="_redirect" value="https://blog.jjfintax.com/archive" />
+                <div class="control is-size-5-mobile">
+                    <input type="email" id="email" name="email" aria-label="email" 
+                        placeholder="name@example.com" required="required" style="width:290px; height:51px;border-radius: 7px; font-family: 'Inter', Poppins;font-size: 20px;color:#cdcdcd; text-align: center;">
+                </div>
+                <div class="control is-size-5-mobile" style="padding-top: 0.75rem;">
+                    <button align="center" class="footer-input" type="submit" style="width:290px; height:51px;border-radius: 7px;font-family: 'Inter', Poppins;font-size: 20px; border-color: #6aa9d5;background-color: #6aa9d5; color: #ffffff;">
+                      Stay Updated
+                    </button>
+                </div>
+              </form>
+              <p align="center" class="is-size-7" style="padding-top: 0.25rem; color:white">
+                  Two insightful newsletter every week.
+              </p>
+              <div>
+                <a href="https://play.google.com/store/apps/details?id=com.jjtax.app"><img src="./public/img/playstore.png" width="129px" height="52.5px" alt="JJ Tax APP/Play Store"></a>
+                <a href="https://jjtax.onelink.me/LXJ6/a8575660"><img src="./public/img/appstore.png" width="133.5px" height="52.5px" alt="JJ Tax APP/App Store"> </a>
+            </div>    
+            </div>
+            <div class="col">
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Services</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="#">Income Tax</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">GST</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">TDS</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Tax Planning</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Accounting</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Startup Service</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">ROC Compliances</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Wealth Management</a></li>
+              </ul>
+            </div>              
+            <div class="col">
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Other Services</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="#">Legal Services</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Firm Incorporation</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">HRA Calculator</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">NRI Services</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">DSC</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Reply to Notice</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">PAN</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Aadhar-PAN link</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">RBI/FEMA compliances</a></li>
+              </ul>
+            </div>
+            <div class="col" >
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Company</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="aboutus.html">About Us</a></li>
+                <li class="footer-font-info"><a class="active-link" href="awards.html">Media</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Finmag</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a></li>
+                <li class="footer-font-info"><a class="footer-font-info"><a class="active-link" href="investor.html">Investor Relations</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>Other Links</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="#">FAQs</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">T&C</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Privacy Policy</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Gallery</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h6 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;"><b>JJ Capsule</b></h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="https://blog.jjfintax.com">Blogs</a></li>
+                <li class="footer-font-info"><a class="active-link" href="news.html">News & Updates</a></li>
+                <li class="footer-font-info"><a class="active-link" href="taxcalendar.html">Tax Calendar</a></li>
+                <li class="footer-font-info"><a class="active-link" href="taxtips.html">Tax Tips</a></li>
+                <li class="footer-font-info"><a class="active-link" href="pricing.html"><b>Pricing</b></a></li>
+                <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact Us</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </html>
