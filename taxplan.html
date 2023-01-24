@@ -26,6 +26,11 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/script.js"></script>
     <style>
+      a:hover 
+      {
+          text-decoration: none;
+          color:#6aa9d5;
+      }      
       .initial-high-taxes
       {
         width: 761px;
@@ -132,7 +137,7 @@
       .download-taxes
       {
         box-sizing: border-box;
-        position:absolute;
+        /*position:absolute;*/
         display: flex;
         width: 284px;
         height: 45px;
@@ -140,6 +145,8 @@
         top: 450px;
         background: rgba(17, 103, 175, 0.87);
         border-radius: 10px;
+        transform:scale(1,1);
+        transition:transform 1501ms ease;
       }
       .download-app button:hover 
       {
@@ -148,7 +155,7 @@
       .register-taxes
       {
         box-sizing: border-box;
-        position: sticky;
+        /*position: sticky;*/
         display: flex;
         width: 284px;
         height: 44px;
@@ -157,6 +164,8 @@
         background: #FFFFFF;
         border: 2px solid rgba(17, 103, 175, 0.87);
         border-radius: 10px;
+        transform:scale(1,1);
+        transition:transform 1501ms ease;
       }
       .text-display-taxes
       {
@@ -483,6 +492,14 @@
           font-family: 'Inter', League Spartan;
           font-size:15px;	
         }
+        .footer-section-heading
+        {
+          font-family: 'Inter', League Spartan;
+          font-size: 18px;
+          color: #ffffff;
+          padding-left: 16px;
+        }
+
     </style>
 </head>    
     <body>
@@ -733,12 +750,12 @@
                    <a href="https://jjtax.onelink.me/LXJ6/a8575660">
                     <button type="button" class="download-taxes download-app" style="font-family: 'League Spartan';font-style: normal;font-weight: 700;font-size: 25px;line-height: 70px;align-items: center; text-align: center;color: #FFFFFF;padding-left: 40px;border-style: none;cursor: pointer;">DOWNLOAD NOW</button>
                    </a>
-                    <img src="./img/google.png" style="padding-left: 19rem;margin-top: -.95rem;">
+                    <img src="./img/google.png" style="padding-left: 19rem;margin-top: -4.25rem;">
                   </span>
                     <button type="button" class="register-taxes" onclick="window.fcWidget.open();window.fcWidget.show();" style="font-family: 'League Spartan';font-style: normal;font-weight: 700;font-size: 25px;line-height: 70px;align-items: center;text-align: center;color: rgba(17, 103, 175, 0.87);padding-left: 80px;margin-top:-1rem; text-decoration: none;">
                           Save Now
                     </button>
-                  <span><img src="./img/rating.png" style="margin-top:-1.5rem;padding-left: 19rem;"></span>
+                  <span><img src="./img/rating.png" style="margin-top:-3.85rem;padding-left: 19rem;"></span>
                 </div>
               </div>  
             </div>    
@@ -762,13 +779,13 @@
                     Tailormade plans to suit your needs 👋🏻
                   </div>
                 </div>  
-                <div class="col-sm-6" style="padding-left:250px;">
-                  <div class="rec-plans-text" style="margin-top:100px;margin-left:310px;">
+                <div class="col-sm-6" style="padding-left:150px;">
+                  <div class="rec-plans-text" style="margin-top:100px;margin-left:210px;">
                     Recommended Plans  
                   </div>
-                  <img src="./img/platinum.png" style="width: 90px;height: 75.85px;margin-left: 250px;margin-top:20px;">
+                  <img src="./img/platinum.png" style="width: 90px;height: 75.85px;margin-left: 150px;margin-top:20px;">
                   <a href="pricing.html">
-                      <div style="width: 206.13px;height: 64px;left: 983px;top: 835px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top: -80px;margin-left:300px;opacity: 1;">
+                      <div style="width: 206.13px;height: 64px;left: 983px;top: 835px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top: -80px;margin-left:200px;opacity: 1;">
                         <img src="img/section-2-silver-1.png" style="position:absolute; z-index: auto;margin-left: -100px;">
                         <div style="font-family: 'League Spartan';font-style: normal;font-weight: 900;font-size: 20px;line-height: 35px;text-align: center;color: #053757;margin-top: 5px;margin-left: 35px;">
                           Platinum
@@ -779,7 +796,7 @@
                       </div>
                   </a>    
                   <a href="pricing.html">
-                    <div style="width: 217px;height: 71px;left: 1071px;top: 926px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top:20px;margin-left:425px;opacity: 1">
+                    <div style="width: 217px;height: 71px;left: 1071px;top: 926px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top:20px;margin-left:325px;opacity: 1">
                       <img src="img/section-2-silver-2.png" style="position:absolute; z-index: auto;margin-left: -120px;">
                       <div style="font-family: 'League Spartan';font-style: normal;font-weight: 900;font-size: 20px;line-height: 30px;text-align: center;color: #053757;margin-top:10px; margin-left: 20px;">
                         Jumbo Jet Plan (JJ)
@@ -790,7 +807,7 @@
                     </div>
                   </a>
                   <a href="pricing.html">
-                      <div style="width: 129px;height: 31px;left: 1120px;top: 1020px;display: flex;align-items: center;background: #FFFFFF;;margin-top:20px;margin-left:480px;opacity: 1">
+                      <div style="width: 129px;height: 31px;left: 1120px;top: 1020px;display: flex;align-items: center;background: #FFFFFF;;margin-top:30px;margin-left:380px;opacity: 1">
                         <img src="img/section-2-silver-2.png" style="position:absolute; z-index: auto;margin-left: -120px;">
                         <div style="font-family: 'League Spartan';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;text-align: center;color: #053757;margin-left:15px;">
                           See all plans
@@ -899,7 +916,7 @@
               </div>               
             </div>            
           </div>          
-          <div class="w-100  section-five-bg-taxes">
+          <div class="w-75 p-3 section-five-bg-taxes" style="display:flex;align-items:center;margin-left: 21rem;">          
             <div class="container">
               <div class="row display:flex">
                 <div class="col-sm-12" style="margin-top:5rem;">
@@ -1014,24 +1031,23 @@
                 </div>    
                 </div>
                 <div class="col">
-                  <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>Services</b></h5>
+                  <h5 class="footer-section-heading">Services</h5>
                   <ul class="list-unstyled">
-                    <li class="footer-font-info"><a class="active-link" href="#">Income Tax</a></li>
+                    <li class="footer-font-info"><a class="active-link" href="itr.html">Income Tax</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">GST</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">TDS</a></li>
-                    <li class="footer-font-info"><a class="active-link" href="#">Tax Planning</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">Accounting</a></li>
-                    <li class="footer-font-info"><a class="active-link" href="#">Startup Service</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">ROC Compliances</a></li>
-                    <li class="footer-font-info"><a class="active-link" href="#">Wealth Management</a></li>
+                    <li class="footer-font-info"><a class="active-link" href="#">Legal Services</a></li>
+                    <li class="footer-font-info"><a class="active-link" href="#">Startup Services</a></li>
+                    <li class="footer-font-info"><a class="active-link" href="#">Tax Planning</a></li>                
                   </ul>
                 </div>              
                 <div class="col">
-                  <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>Other Services</b></h5>
+                  <h5 class="footer-section-heading">Other Services</h5>
                   <ul class="list-unstyled">
                     <li class="footer-font-info"><a class="active-link" href="#">Legal Services</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">Firm Incorporation</a></li>
-                    <li class="footer-font-info"><a class="active-link" href="#">HRA Calculator</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">NRI Services</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">DSC</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">Reply to Notice</a></li>
@@ -1041,7 +1057,7 @@
                   </ul>
                 </div>
                 <div class="col" >
-                  <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>Company</b></h5>
+                  <h5 class="footer-section-heading">Company</h5>
                   <ul class="list-unstyled">
                     <li class="footer-font-info"><a class="active-link" href="aboutus.html">About Us</a></li>
                     <li class="footer-font-info"><a class="active-link" href="awards.html">Media</a></li>
@@ -1049,26 +1065,34 @@
                     <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a></li>
                     <li class="footer-font-info"><a class="footer-font-info"><a class="active-link" href="investor.html">Investor Relations</a></li>
                   </ul>
+                  <h5 class="footer-section-heading">Tools</h5>
+                  <ul class="list-unstyled">
+                    <li class="footer-font-info"><a class="active-link" href="hra_calculator.html">HRA Calculator</a></li>
+                  </ul>
                 </div>
                 <div class="col">
-                  <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>Other Links</b></h5>
+                  <h5 class="footer-section-heading">Other Links</h5>
                   <ul class="list-unstyled">
                     <li class="footer-font-info"><a class="active-link" href="faq.html">FAQs</a></li>
-                    <li class="footer-font-info"><a class="active-link" href="tandc.html">T&C</a></li>
-                    <li class="footer-font-info"><a class="active-link" href="privpolicy.html">Privacy Policy</a></li>
+                    <li class="footer-font-info"><a class="active-link" href="terms-and-conditions.html">T&C</a></li>
+                    <li class="footer-font-info"><a class="active-link" href="privacy-policy.html">Privacy Policy</a></li>
                     <li class="footer-font-info"><a class="active-link" href="#">Gallery</a></li>
                   </ul>
                 </div>
                 <div class="col">
-                  <h6 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>JJ Capsule</b></h5>
+                  <h5 class="footer-section-heading">JJ Capsule</h5>
                   <ul class="list-unstyled">
                     <li class="footer-font-info"><a class="active-link" href="https://blog.jjfintax.com">Blogs</a></li>
                     <li class="footer-font-info"><a class="active-link" href="news.html">News & Updates</a></li>
                     <li class="footer-font-info"><a class="active-link" href="taxcalendar.html">Tax Calendar</a></li>
                     <li class="footer-font-info"><a class="active-link" href="taxtips.html">Tax Tips</a></li>
-                    <li class="footer-font-info"><a class="active-link" href="pricing.html"><b>Pricing</b></a></li>
-                    <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact Us</a>
                   </ul>
+                  <a class="active-link" href="pricing.html">
+                    <h5 class="footer-section-heading">Pricing</h5>
+                  </a>
+                  <a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">
+                    <h5 class="footer-section-heading">Contact Us</h5>
+                  </a>
                 </div>
               </div>
             </div>

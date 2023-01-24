@@ -26,6 +26,11 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/script.js"></script>
     <style>
+      a:hover 
+      {
+          text-decoration: none;
+          color:#6aa9d5;
+      }      
       .online-gst
       {
          font-family: 'League Spartan';
@@ -128,7 +133,7 @@
       .download-gst
       {
         box-sizing: border-box;
-        position:absolute;
+        /*position:absolute;*/
         display: flex;
         width: 284px;
         height: 45px;
@@ -136,6 +141,8 @@
         top: 450px;
         background: rgba(17, 103, 175, 0.87);
         border-radius: 10px;
+        transform:scale(1,1);
+        transition:transform 1501ms ease;
       }
       .download-app button:hover 
       {
@@ -144,7 +151,7 @@
       .register-gst
       {
         box-sizing: border-box;
-        position: sticky;
+        /*position: sticky;*/
         display: flex;
         width: 284px;
         height: 44px;
@@ -153,6 +160,8 @@
         background: #FFFFFF;
         border: 2px solid rgba(17, 103, 175, 0.87);
         border-radius: 10px;
+        transform:scale(1,1);
+        transition:transform 1501ms ease;
       }
       .gst-ret-text
       {
@@ -737,12 +746,12 @@
                    <a href="https://jjtax.onelink.me/LXJ6/a8575660">
                     <button type="button" class="download-gst download-app" style="font-family: 'League Spartan';font-style: normal;font-weight: 700;font-size: 25px;line-height: 70px;align-items: center;text-align: center;color: #FFFFFF;padding-left: 40px;border-style: none;cursor: pointer;">DOWNLOAD NOW</button>
                    </a>
-                    <img src="./img/google.png" style="padding-left: 19rem;margin-top: -.95rem;">
+                    <img src="./img/google.png" style="padding-left: 19rem;margin-top: -4.5rem;">
                   </span>
                     <button type="button" class="register-gst" onclick="window.fcWidget.open();window.fcWidget.show();" style="font-family: 'League Spartan';font-style: normal;font-weight: 700;font-size: 25px;line-height: 70px;align-items: center;text-align: center;color: rgba(17, 103, 175, 0.87);padding-left: 60px;margin-top:-1rem; text-decoration: none;">
                           Register Now
                     </button>
-                  <span><img src="./img/rating.png" style="margin-top:-1.5rem;padding-left: 19rem;"></span>
+                  <span><img src="./img/rating.png" style="margin-top:-3.9rem;padding-left: 19rem;"></span>
                 </div>
               </div>  
             </div>    
@@ -762,12 +771,12 @@
                   </div>
                 </div>  
                 <div class="col-sm-6">
-                  <div class="rec-plans-text" style="margin-top:100px;margin-left:510px;" >
+                  <div class="rec-plans-text" style="margin-top:100px;margin-left:310px;" >
                     Recommended Plans  
                   </div>
-                  <img src="./img/platinum.png" style="width: 90px;height: 75.85px;margin-left: 450px;margin-top:20px;">
+                  <img src="./img/platinum.png" style="width: 90px;height: 75.85px;margin-left: 250px;margin-top:20px;">
                   <a href="pricing.html">
-                      <div style="width: 206.13px;height: 64px;left: 983px;top: 835px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top: -80px;margin-left:500px;opacity: 1;">
+                      <div style="width: 206.13px;height: 64px;left: 983px;top: 835px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top: -80px;margin-left:300px;opacity: 1;">
                         <img src="img/section-2-silver-1.png" style="position:absolute; z-index: auto;margin-left: -120px;">
                         <div style="font-family: 'League Spartan';font-style: normal;font-weight: 900;font-size: 20px;line-height: 35px;text-align: center;color: #053757;margin-top: 5px;margin-left: 35px;">
                           Platinum
@@ -778,7 +787,7 @@
                       </div>
                   </a>    
                   <a href="pricing.html">
-                    <div style="width: 217px;height: 71px;left: 1071px;top: 926px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top:20px;margin-left:625px;opacity: 1">
+                    <div style="width: 217px;height: 71px;left: 1071px;top: 926px;display: flex;align-items: center;background: #F5F5F5;border-radius: 5px;margin-top:20px;margin-left:425px;opacity: 1">
                       <img src="img/section-2-silver-2.png" style="position:absolute; z-index: auto;margin-left: -120px;">
                       <div style="font-family: 'League Spartan';font-style: normal;font-weight: 900;font-size: 20px;line-height: 30px;text-align: center;color: #053757;margin-top:10px; margin-left: 20px;">
                         Jumbo Jet Plan (JJ)
@@ -789,7 +798,7 @@
                     </div>
                   </a>
                   <a href="pricing.html">
-                      <div style="width: 129px;height: 31px;left: 1120px;top: 1020px;display: flex;align-items: center;background: #FFFFFF;;margin-top:20px;margin-left:680px;opacity: 1">
+                      <div style="width: 129px;height: 31px;left: 1120px;top: 1020px;display: flex;align-items: center;background: #FFFFFF;;margin-top:20px;margin-left:480px;opacity: 1">
                         <img src="img/section-2-silver-2.png" style="position:absolute; z-index: auto;margin-left: -120px;">
                         <div style="font-family: 'League Spartan';font-style: normal;font-weight: 400;font-size: 20px;line-height: 30px;text-align: center;color: #053757;margin-left:15px;">
                           See all plans
@@ -899,7 +908,7 @@
               </div>               
             </div>            
           </div>          
-          <div class="w-75 p-3 section-five-bg-gst" style="margin-left: 20rem;">
+          <div class="w-75 p-3 section-five-bg-gst" style="display:flex;align-items:center;margin-left: 21rem;">
             <div class="container">
               <div class="row display:flex">
                 <div class="col-sm-12" style="margin-top:5rem;">
@@ -1012,12 +1021,6 @@
                     <a href="https://play.google.com/store/apps/details?id=com.jjtax.app"><img src="./img/playstore.png" width="129px" height="52.5px" alt="JJ Tax APP/Play Store"></a>
                     <a href="https://jjtax.onelink.me/LXJ6/a8575660"><img src="./img/appstore.png" width="133.5px" height="52.5px" alt="JJ Tax APP/App Store"> </a>
                   </div>    
-                  <div>
-                    <a href="https://www.linkedin.com/company/jj-tax/" target="_blank"><img src="./img/icons/linkedIn.png"/></a>
-                    <a href="https://www.instagram.com/jjfintax/" target="_blank"><img src="./img/icons/instagram.png"/></a>
-                    <a href="https://twitter.com/JJTaxApp" target="_blank"><img src="./img/icons/twitter.png"/></a>
-                    <a href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA" target="_blank"><img src="./img/icons/youtube.png"/></a>
-                  </div>
                 </div>
                 <div class="col">
                   <h5 class="footer-section-heading">Services</h5>
