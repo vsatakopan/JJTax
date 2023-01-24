@@ -1,0 +1,1452 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>One Stop Solution for all your Tax needs | JJ Tax</title>
+    <link href="https://www.jjfintax.com/public/img/logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common/scrmob.css"></link>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script>
+      function disbtn() {
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+    </script>    
+    </head>
+    <style>
+        .accordion {
+	/*margin: auto;
+	width: 1000px;
+  padding-right: 200px;*/
+}
+.accordion input {
+	display: none;
+}
+.box {
+	position: relative;
+	background: white;
+    height: 80px;
+    transition: all .15s ease-in-out;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+}
+header.box {
+	background: #E6F4F7;
+	z-index: 100;
+	cursor: initial;
+	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
+}
+header .box-title {
+	margin: 0;
+	font-weight: normal;
+	font-size: 16pt;
+	color: white;
+	cursor: initial;
+  padding: 0 20px;
+}
+.box-title {
+	/*width: calc(100% - 20px);*/
+  width:auto;
+  height: 64px;
+	line-height: 64px;
+	padding: 0 20px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+.box-title-category {
+	width: calc(100% - 20px);
+  width:auto;
+  height: 64px;
+	line-height: 64px;
+	padding: 0 20px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+.box-content {
+	width: calc(100% - 20px);
+	padding: 30px 20px;
+	font-size: 11pt;
+	color: rgba(0,0,0,.54);
+	display: none;
+}
+.box-close {
+	position: absolute;
+	height: 64px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	display: none;
+}
+input:checked + .box {
+	height: auto;
+	margin: 16px 0;
+  box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
+input:checked + .box .box-title {
+	border-bottom: 1px solid rgba(0,0,0,.18);
+  color:#1167AF;
+}
+input:checked + .box .box-content,
+input:checked + .box .box-close {
+	display: inline-block;
+}
+.arrows section .box-title {
+	padding-left: 44px;
+	width: calc(100% - 64px);
+}
+.arrows section .box-title:before {
+	position: absolute;
+	display: block;
+	content: '\203a';
+	font-size: 18pt;
+	left: 20px;
+	top: -2px;
+	transition: transform .15s ease-in-out;
+	color: #000000;
+}
+input:checked + section.box .box-title:before {
+	transform: rotate(90deg);
+  color:#1167AF;
+}
+
+.question-color{
+color: #4A4B4E;
+font-family: 'Inter', League Spartan;
+font-size:13px;	
+}
+
+.answer-color{
+color:#000000;
+font-family: 'Inter', League Spartan;
+font-size:15px;	
+}
+
+    </style>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a href="index.html"><img class="logo-display navbar-brand img-fluid" src="https://www.jjfintax.com/public/img/jjtax-logo.png" alt="JJTax" ></a>
+            <button class="navbar-toggler ms-auto ms-sm-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="align-items: right;">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="menu-display">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Company</a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="awards.html">Media</a></li>
+                        <!--li><hr class="dropdown-divider"></li-->
+                        <li><a class="dropdown-item" href="#">Finmag</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a></li>
+                        <li><a class="dropdown-item" href="investor.html">Investor Relations</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">Insights</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="https://blog.jjfintax.com/">Blogs</a></li>
+                          <li><a class="dropdown-item" href="news.html">News & Update</a></li>
+                          <!--li><hr class="dropdown-divider"></li-->
+                          <li><a class="dropdown-item" href="taxcalendar.html">Tax Calendar</a></li>
+                          <li><a class="dropdown-item" href="taxtips.html">Tax Tips</a></li>
+                        </ul>
+                    </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Income Tax</a></li>
+                      <li><a class="dropdown-item" href="#">GST</a></li>
+                      <!--li><hr class="dropdown-divider"></li-->
+                      <li><a class="dropdown-item" href="#">TDS</a></li>
+                      <li><a class="dropdown-item" href="#">Tax Planning</a></li>
+                      <li><a class="dropdown-item" href="#">Accounting</a></li>
+                      <li><a class="dropdown-item" href="#">Startup Services</a></li>
+                      <li><a class="dropdown-item" href="#">ROC Compliances</a></li>
+                      <li><a class="dropdown-item" href="#">Wealth Management</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact</a>
+                   </li>
+                </ul>          
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="sticky-icon is-hidden-mobile">
+          <a href="https://www.linkedin.com/company/jj-tax/" class="social-media-color"><i class="fab fa-linkedin"> </i> LinkedIN </a>
+          <a href="https://www.instagram.com/jjfintax/" class="social-media-color"><i class="fab fa-instagram"></i> Instagram </a>
+          <a href="https://www.facebook.com/JJ-Tax-102265144737511" class="social-media-color"><i class="fab fa-facebook-f"> </i> Facebook </a>
+          <a href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA" class="social-media-color"><i class="fab fa-youtube"></i> Youtube </a>
+          <a href="https://twitter.com/JJTaxApp" class="social-media-color"><i class="fab fa-twitter"> </i> Twitter </a>
+          <a href="https://open.spotify.com/show/1LoGRoGWHHBo8MHm3q365E" class="social-media-color"><i class="fab fa-spotify"> </i> Spotify </a>
+        </div>
+        <div class="ticker-wrapper-h">
+            <div class="heading">JJTax News</div>
+                  <ul class="news-ticker-h">
+                    <li><a href=""><b>Pay your taxes through JJ Tax App</b></a></li>
+                    <li><a href=""><b>ZERO</b> tax on income of Rs.10 lakhs, <b>Plan your investments with JJ Tax.</b>&nbsp;&nbsp;<b>101</b> ways to save your taxes LEGALLY.&nbsp;&nbsp;Ask us! Save <b>80%</b> of your cost.&nbsp;&nbsp;Outsource your Accounting to JJ Tax.&nbsp;&nbsp;Want to hire a <b>vCFO</b>? Contact JJ Tax</a></li>
+                    <li><a href="">20 Dec: Last date to file GSTR-3B for November 2022</a></li>
+                    <li><a href="">15 Dec: Last date to deposit 3rd installment of Advance Tax for F.Y. 2022-23</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush </a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app </a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href=""><b>Taxes</b> It shall be <b>Pay your taxes through JJ Tax App</b></a></li>
+                    <li><a href=""><b>ZERO</b> tax on income of Rs.10 lakhs, <b>Plan your investments with JJ Tax.</b>&nbsp;&nbsp;<b>101</b> ways to save your taxes LEGALLY.&nbsp;&nbsp;Ask us! Save <b>80%</b> of your cost.&nbsp;&nbsp;Outsource your Accounting to JJ Tax.&nbsp;&nbsp;Want to hire a <b>vCFO</b>? Contact JJ Tax</a></li>
+                    <li><a href="">20 Dec: Last date to file GSTR-3B for November 2022</a></li>
+                    <li><a href="">15 Dec: Last date to deposit 3rd installment of Advance Tax for F.Y. 2022-23</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                    <li><a href=""><b>Taxes</b> It shall be <b>Pay your taxes through JJ Tax App</b></a></li>
+                    <li><a href=""><b>ZERO</b> tax on income of Rs.10 lakhs, <b>Plan your investments with JJ Tax.</b>&nbsp;&nbsp;<b>101</b> ways to save your taxes LEGALLY.&nbsp;&nbsp;Ask us! Save <b>80%</b> of your cost.&nbsp;&nbsp;Outsource your Accounting to JJ Tax.&nbsp;&nbsp;Want to hire a <b>vCFO</b>? Contact JJ Tax</a></li>
+                    <li><a href="">20 Dec: Last date to file GSTR-3B for November 2022</a></li>
+                    <li><a href="">15 Dec: Last date to deposit 3rd installment of Advance Tax for F.Y. 2022-23</a></li>
+                    <li><a href="">Now chat in Hindi with our Tax Experts</a></li>
+                    <li><a href="">अब पाए हर TAX जुड़े सवाल का जवाब हिंदी में</a></li>
+                    <li><a href="">24/7 chat available on JJ Tax app</a></li>
+                    <li><a href="">जेजे टैक्स ऐप पर 24/7 चैट करे।</a></li>
+                    <li><a href="">File Now with JJ Tax and avoid last minute rush</a></li>
+                    <li><a href="">We are a women empowered startup, invest and join our journey</a></li>
+                    <li><a href="">Awarded with the Best Fintech Solution of the year</a></li>
+                    <li><a href="">CEO Rashi awarded with Nationwide Award under 40 by Business Mint</a></li>
+                    <li><a href="">Our Radio ads are aired in more than 15 cities( Radio icon is clickable)</a></li>
+                  </ul>
+                </div>
+              <!--/div>
+            </div>
+          </div-->
+          <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5">Get In Touch</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      Mobile No : +91-9310854724
+                     </div>
+                    <div class="mb-3">
+                      EMail ID : contact@jjfintax.com
+                    </div>
+                    <div class="mb-3">
+                      Address : 234, Tower B-2, Spaze I Tech Park, <br>
+                      Sonha Road, Sector 49, Gurgaon - 122018, Haryana, India
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="formModal" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Come Join JJTax</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="careerForm" name="careerForm" method="post" action="https://submit-form.com/dktfg2z3" onsubmit="disbtn();">
+                    <input type="hidden" name="_redirect" value="https://www.jjfintax.com/success.html" />
+                    <input type="hidden" name="_email.subject" value="New Job Resume" />
+                    <input type="hidden" name="_email.from" value="JJ Tax Site" />
+                    <input type="checkbox" name="_data" style="display:none" tabindex="-1" autocomplete="off" />
+                    <div align="center">Provide us with your details and we'll have a look at it soon.<br><br></div>
+                    <div class="mb-3">
+                      <select id="post" class="form-select">
+                        <option ="Tax_Expert">Apply for Tax Expert</option>
+                        <option ="Tech_Intern">Apply for Tech Intern</option>
+                        <option = "Marketing">Apply for Marketing Expert</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required">
+                    </div>
+                    <div class="mb-3">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Your e-Mail" required="required">
+                    </div>
+                    <div class="mb-3">
+                      <input type="number" class="form-control" min=10 id="mobile" name="mobile" placeholder="Mobile" required="required" title="Enter a Valid Mobile Number">
+                    </div>
+                    <div class="mb3">
+                      <!--input type='file' class='form-control' id='file' name="file" placeholder='File' required="required" accept=".doc,.docx,.pdf"-->
+                      <input
+                      type="hidden"
+                      id="document"
+                      name="document"
+                      role="uploadcare-uploader" required="required"
+                      data-public-key="c8128b4ef704e7fe2021"
+                      />
+                    </div>  
+                    <br>
+                    <input type="submit" id="submit_btn" class="btn btn-success" value="Apply Now">
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>                
+              </div>
+            </div>
+          </div>
+            <br>
+            <br>
+            <div class="row display:flex">
+                <div class="col-sm-12 d-flex justify-content-center" style="font-family: 'Inter', League Spartan;font-size: 32px;color: #053757">
+                    <b>-- FAQs --</b>
+                </div>
+            </div>   
+            <div class="w-100  grad_6">
+                <div class="container">
+                    <div class="row display:flex">
+                        <div class="col-sm-12">
+                            <br><br>
+                            <nav class="accordion arrows">
+                                <header class="box">
+                                  <label for="acc-close" class="box-title-category" style="font-family: 'Inter', League Spartan;font-size: 25px;color: #1167AF" style="text-align: center;"><b>General</b></label>
+                                </header>
+                                <input type="radio" name="accordion" id="gen1" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen1">What is DSC?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Digital Signature Certificates (DSC) are the digital equivalent (that is electronic format) of physical or paper certificates. Few Examples of physical certificates are drivers' licenses, passports or membership cards. Certificates serve as proof of identity of an individual for a certain purpose; for example, a driver's license identifies someone who can legally drive in a particular country. Likewise, a digital certificate can be presented electronically to prove one's identity, to access information or services on the Internet or to sign certain documents digitally.</div>
+                                </section>
+                                <input type="radio" name="accordion" id="gen2" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen2">Why is DSC required?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Physical documents are signed manually, similarly, electronic documents, for example e-forms are required to be signed digitally using a Digital Signature Certificate.</div>
+                                </section>
+                                <input type="radio" name="accordion" id="gen3" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen3">Who Issues DSC?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">A licensed Certifying Authority (CA) issues the digital signature. Certifying Authority (CA) means a person who has been granted a license to issue a digital signature certificate under Section 24 of the Indian IT-Act 2000.</div>
+                                </section>
+                                <input type="radio" name="accordion" id="gen4" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen4">What type of DSC is to be obtained for e-filing on the MCA portal?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">DSC of either Class 2 and Class 3 signing certificate category issued by a licensed Certifying Authority (CA) needs to be obtained for e-Filing on the MCA Portal</div>
+                                </section>
+                                <input type="radio" name="accordion" id="gen5" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen5">Is Director Identification a prerequisite for obtaining DSC?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">No</div>
+                                </section>
+                                <input type="radio" name="accordion" id="gen6" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen6">What are the documents to be filed with ROC every year?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Invariably, the Balance Sheet and Annual Return have to be filed every year. Other documents such as, Return of Allotment (Form No. Pas-3), Change of Registered office (Form No. INC-22), Change among the Directors (Form No. DIR-12), Charges (Form No. CHG-1, 9, 4) etc., have to be filed within the due date from the events taking place in the company as per the Companies Act, 2013.</div>
+                                </section>
+                                <input type="radio" name="accordion" id="gen7" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen7"> What is the minimum number of directors required to form a company?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Minimum no. of directors for One Person Company: One, Private Limited Company: Two, for Public Limited Company. Three and, for producer company. Five.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen8" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen8">What is the minimum Paid up Capital at the time of registration of a company?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">The minimum paid up capital at the time of registration of a company shall be as follows:OPC- Re.1, Private Limited Company Rs.2, Public Limited Company Rs. 7</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen9" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen9">My SRN is marked as defective. What should I do?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">In case of STP forms, for example annual forms MGT-7 & AOC-4, AOC-4 XBRL etc, if there is any defect or incompleteness, same is marked by the RoC as 'Defective'. You are required to file such form afresh after rectifying the defects/incompleteness with payment of fee and additional fee, as applicable</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen10" />		
+                                <section class="box">
+                                    <label class="box-title question-color" for="gen10">How to sign e-form?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">An e-form can be signed by the authorized signatory/representative using the Digital Signature Certificate (DSC). Click the DSC box in the e-form to affix the digital signature.</div>
+                                  </section>		
+                                <input type="radio" name="accordion" id="gen11" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen11">Can a resident person undertake forex transaction?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Resident persons are permitted to undertake forex transactions only with authorised persons and for permitted purposes, in terms of the Foreign Exchange Management Act, 1999 (FEMA).</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen12" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen12">Who are authorised persons?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">An authorized person is an entity authorized by the Reserve Bank of India to deal in forex. It can be an authorized dealer, money changer, the off-shore banking unit, or any other person for the time being authorized under Sub-Section (1) of Section 10 of FEMA. The list of authorized persons is available here.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen13" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen13">Can a resident person undertake forex transactions on internet/electronic trading portals?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Permitted forex transactions executed electronically should be undertaken only on electronic trading platforms (ETPs) authorised for the purpose by the Reserve Bank of India (RBI) or on recognized stock exchanges (National Stock Exchange of India Ltd. (NSE), BSE Ltd. (BSE) and Metropolitan Stock Exchange of India Ltd. (MSE)) as per the terms and conditions specified by RBI from time to time. The list of authorised ETPs is available here. As per FEMA, resident persons are not permitted to undertake forex transactions on unauthorised ETPs.Resident persons undertaking forex transactions on unauthorised ETPs shall render themselves liable for penal action under FEMA</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen14" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen14">Can a resident individual remit margin overseas under Liberalised Remittance Scheme (LRS) for undertaking online forex trading?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">No. Remittances under LRS can be made only for permissible current and capital account transactions. All other transactions which are otherwise not permissible under FEMA and those in the nature of remittance for margins or margin calls to overseas exchanges / overseas counterparty are not allowed under the Scheme.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen15" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen15">What are the permitted purposes for undertaking forex cash, tom and spot transactions?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Forex cash, tom and spot transactions can be undertaken for the purpose of buying/selling foreign exchange for permitted current/capital account transactions.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen16" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen16">What is the meaning of capital account transaction? What are the permitted capital account transactions?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Capital account transaction means a transaction which alters the assets or liabilities, including contingent liabilities, outside India of persons resident in India or assets or liabilities in India of persons resident outside India. Please refer to the Foreign Exchange Management (Permissible Capital Account Transactions) Regulations, 2000 for permitted capital account transactions</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen17" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen17">What is Will?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Will is a written declaration by a person about his/her wishes for all matters such as distributing his/her properties/assets, wealth to family, relatives, outsiders etc on his/ her death. A will should be signed in the presence of two witnesses to give a legal effect as per Indian Laws.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen18" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen18">What is the benefit of preparing a will?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Preparing a will ensures that all your assets and properties are distributed and disposed of as per your wishes after your death avoiding disputes/misunderstanding or any legal interference within the family.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen19" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen19">What will happen if don't make a will?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">When one dies without writing a will all the properties are distributed as per the succession law applicable to your religion. Succession laws have definite fixed proportion to be distributed to all family members equally. There could be chances of delay in distribution of properties which may lead to legal dispute amongst family members etc.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen20" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen20">Who can make a will?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Any person above the age of 18 Years can make a will with south mind i.e capable of understanding his actions and is free from any undue influences</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen21" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen21">How to make will?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">A will can be handwritten or typed. However a typed will is preferred on a plían paper as stamp paper or stamp duty payment is exempted in India for a will document.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen22" />		
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen22">How is HUF formed?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">Hindu Undivided Family (HUF) is treated as a 'person' under section 2(31) of the Income-tax Act, 1961 (herein after referred to as "the Act'). HUF is a separate entity for the purpose of assessment under the Act.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="gen23" />
+                                <section class="box">
+                                  <label class="box-title question-color" for="gen23">How is AOP formed?</label>
+                                  <label class="box-close" for="acc-close"></label>
+                                  <div class="box-content answer-color">An association of persons (AOP) or a body of individuals (BOI), whether incorporated or not, is treated as a 'person' under section 2(31) of the Income-tax Act, 1961. Hence, AOP or BOI is treated as a separate entity for the purpose of assessment under the Income-tax Act. Here it is important to note that an AOP or BOI shall be deemed to be a person, whether or not, they were formed or established or incorporated with the object of deriving income, profits or gains.</div>
+                                </section>		
+                                <input type="radio" name="accordion" id="acc-close" />
+                                <br>
+                                <br>
+                                <header class="box">
+                                    <label for="acc-close" class="box-title-category" style="font-family: 'Inter', League Spartan;font-size: 25px;color: #1167AF"><b>Income Tax</b></label>
+                                  </header>
+                                  <input type="radio" name="accordion" id="it1" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it1">What is Income Tax Return?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content">Income Tax Return is a form in which the taxpayers file information about his income earned and tax applicable to the income tax department.</div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it2" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it2">What are the Due dates of Filing Income Tax return?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">                                    
+                                        31st July is the due date for filing ITR in case of Individual, HUF, AOP, BOI whose books of accounts are not required to be audited;<br>
+                                        31st October is the due date for filing ITR for Corporates and Non-Corporates requiring Tax Audit;<br> 
+                                        30th November is the due date for filing ITR for Assesses requiring Transfer Pricing;<br>                                         
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it3" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it3">Who is required to file Income tax return?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        1.  Conditional Filing of Income tax Return <br>
+                                            Assessee whose Gross Total Income  (i.e income before claiming exemption u/s 54, 54B, 54D, 54EC, 54F, 54G, 54GA, 54GB and deduction Under Chapter VI-A) is more than the basic exemption limit  then the assessee is required to file its ITR.<br>
+                                        2. Compulsory filing of Returns <br>
+                                           (a) Company & Partnership Firm (including LLP) are required to file their ITR mandatorily <br>
+                                           (b) Resident individual who is the beneficial owner of any asset located outside India or has signing authority of any Account outside India <br>
+                                           (c)  Resident individual who is beneficiary of any asset located outside India <br>
+                                           (d)  Resident individual has deposited an amount more than one crore in aggregate in one or more current account maintain with banks or cooperative bank <br>
+                                           (e)  He has incurred foreign travel expenditure of Rs.200000 or more for himself or any other person<br>
+                                           (f)  He has incurred foreign travel expenditure of Rs.200000 or more for himself or any other person<br>                                        
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it4" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it4">ITR Forms</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        1. ITR-1 is for resident individual whose total income includes : <br>
+                                        Income from Salary or Pension; or <br>
+                                        Income from one House Property (except the cases where loss from previous year is carry forward); or <br>
+                                        Income from Other Sources (except Winning from Lottery and Income from Race Horses) <br>
+                                        (Total income from the above sources should not be more than 50 Lakhs)<br>
+                                        Income from Agriculture up to Rs.5000<br>
+                                        2. ITR-2 is for Individual or Hindu Undivided Family (HUF) whose total income includes:<br>
+                                        Income from Salary or Pension; or<br>
+                                        Income from House Property; or<br>
+                                        Income from Other Sources (including Winnings from Lottery and Income from Race Horses)<br>
+                                        (Total income from the above sources should be more than 50 Lakhs)<br>
+                                         If you are a Director of a company (not having income from Business or Profession)<br>
+                                         If you have investments in unlisted equity shares at any time during the financial year<br>
+                                         Income from Capital gain; or<br>
+                                         Income from Agriculture more than Rs.5000<br>
+                                         Having any Foreign Asset or Foreign Income<br>
+                                         Being a non resident and resident not ordinarily resident (RNOR)<br>
+                                        3. ITR-3 is for Individuals and Hindu Undivided Family having income from proprietary  business or carrying on profession with following sources of  income :<br>
+                                        Income from Business and Profession<br>
+                                        If you are a Director of a company<br>
+                                        If you are a partner of a firm having income from partnership firm and not opting for Presumptive taxation <br>
+                                        If you have investments in unlisted equity shares at any time during the financial year<br>
+                                        This return may include income from House Property, Salary/Pension and Income from other sources<br>
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it5" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it5">What is AIS/TIS?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        <b><u>AIS</u></b><br>
+                                        The AIS is a comprehensive statement containing details of all the financial transactions undertaken by taxpayers in a financial year (FY).<br>
+                                        It contains the information relating to income earned from various sources such as salary, dividend, interest from savings account, recurring deposits, sale and purchase of equity shares, bonds, mutual funds etc. The statement also contains information related to TDS, TCS.<br>
+                                        <b><u>TIS</u></b><br>
+                                        The TIS is a generation of Taxpayer Information available in AIS in a simplified format. TIS contains category-wise aggregated information summary for a taxpayer. It shows processed value (i.e., the value generated after processing of information) and derived processed value (i.e., the value generated after processing of information) and derived under each information category (e.g., Salaries, Interest, Dividend etc.).<br>
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it6" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it6">What are the popular tax savings options?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        You can save maximum Rs.1,50,000 in one FY u/s 80C <br>
+                                        1. Fixed Deposit having lock in period of 5 years <br>
+                                        2. Tax savings mutual funds known as Equity linked savings scheme <br>
+                                        3. Premium amount paid on Life Insurance <br>
+                                        4. Senior Citizens Savings Scheme <br>
+                                        5. National Saving Certificates <br>
+                                        6. Unit lInked Insurance Plan<br>
+                                        7. public Provident Fund <br>
+                                        8. Tuition Fees for Maximum two children <br>
+                                        9. Principal Repayment of Housing Loan <br>
+                                        10. Stamp Duty and Registration fee for New House Property <br>
+                                        You can save maximum Rs.1,00,000 in one FY u/s 80D<br>
+                                        1. Medical Insurance Premium paid : (Age Below 60 yrs)<br>
+                                        a. For yourself , spouse , dependent children upto Rs 25,000<br>
+                                        b. For parents Rs. 25,000<br>
+                                        2. Medical Insurance Premium paid (Age above 60 yrs)<br>
+                                        a. For individual being senior citizen upto Rs. 50,000<br>
+                                        b. For parents Rs. 50,000<br>
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it7" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it7">How to save tax other than 80 C and 80D?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        Apart from 80C, various other provisions allow deductions  to taxpayer as follows : <br>
+                                        80D- for medical insurance premium for self, spouse &  dependent parents. <br>
+                                        Section 80EE Deduction  for interest payment of home loan for first home owners <br>
+                                        Section 24- Interest deduction for housing loan upto Rs 2 lakh <br>
+                                        Section 80EEB- interest deduction for vehicle loan for purchase of electric vehicle <br>
+                                        80G- donations to charitable institutions.  <br>
+                                        80GG-if your income does not include HRA component, you can claim rent deduction under 80GG <br>
+                                        Section 80TTA- deduction upto Rs 10,000 for interest received in saving bank account. <br>
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it8" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it8">Am I eligible to pay advance tax?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        If your tax liability for the year after TDS is Rs. 10,000 or more then you are liable to pay advance tax during the same financial year                                        
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it9" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it9">Do salaried person need to pay advance tax?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        Individuals having only salary income are not required to pay advance tax as liability to deduct and deposit tax is on employer in the form of TDS
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it10" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it10">How to calculate advance tax?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        Advance tax is to be calculated on the basis of expected tax liability of the year. Advance tax is to be paid in instalments as given below: <br>
+                                        a) In case of all the assessees (other than assessees opting for presumptive taxation) : <br>
+                                        i) Atleast 15 % on or before 15th June<br>
+                                        ii) Atleast 45 % on or before 15th September<br>
+                                        iii) Atleast 75 % on or before 15th December<br>
+                                        iv) 100 % on or before 15th March<br>
+                                        b) In case of assessee opted for presumptive taxation:  100% on or before 15th March<br>
+                                        Note: Any tax paid on or before 31st day of March shall also be treated as advance tax paid during the same financial year.<br>
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it11" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it11">What is TDS?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        For quick and efficient collection of taxes, the Income-tax Law has incorporated a system of deduction of tax at the point of generation of income. This system is called as “Tax Deduction at Source”, commonly known as TDS. Under this system tax is deducted at the origin of the income. Tax is deducted by the payer and is remitted to the Government by the payer on behalf of the payee. The provisions of deduction of tax at source are applicable to several payments such as salary, interest, commission, brokerage, professional fees, royalty, contract payments, etc. In respect of payments to which the TDS provisions apply, the payer has to deduct tax at source on the payments made by him and he has to deposit the tax deducted by him to the credit of the Government.                                        
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it12" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it12">Is TDS relevant for me as a businessman?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        Yes. Payments may be made to you after TDS. You can adjust this against your final tax liability. You are also required to effect TDS while making business payments. Failure to do so will result in the entire expenditure being disallowed as your business expenditure and taxed as income
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it13" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it13">I have TAN but no TDS is deducted by me during the quarter/year. Do I need to file TDS return?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        It is not mandatory to file NIL TDS return if no TDS has been deducted during the year/quarter. A declaration for non-filing of return has to be filed in this case. Declaration can be filed at tdscpc.gov.in, by logging in as 'Deductor' and going to 'Declaration for Non – filing of TDS statements' under the 'Statement/Payments' menu. Please also note that if the deductor has permanently closed his business, he/she should surrender his TAN before the jurisdictional AO.
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it14" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it14">I have not received TDS certificate from the deductor. Can claim TDS in my return of income?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                       Yes, the tax credit in your case will be reflected in your Form 26AS and, hence, you can check Form 26AS and claim the credit of the tax accordingly. However, the claim of TDS to be made in your return of income should be strictly as per the TDS credit being reflected in Form 26AS. If there is any discrepancy in the tax actually deducted and the tax credit being reflected in Form 26AS then you should intimate the same to the deductor and should reconcile the difference. The credit granted by the Income-tax Department will be as per Form 26AS.
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it15" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it15">I have not received TDS certificate from my employer. Can claim TDS deducted from my salary?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        Yes. The claim can be made in your ITR. However, Department will raise a demand which will not be enforced on you but on your employer
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it16" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it16">What is PAN?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        PAN stands for Permanent Account Number. PAN is a ten-digit unique alphanumeric number issued by the Income Tax Department. PAN is issued in the form of a laminated plastic card (commonly known as PAN card).
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it17" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it17">How to apply for PAN?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        PAN application can be filled up in the following forms- <br>
+                                        1. FORM 49A (for Indian Citizens) <br>
+                                        2. FORM 49AA (for foreign citizens)                                        
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it18" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it18">What is the validity of PAN?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        PAN obtained once is valid for life-time of the PAN-holder throughout India. It is not affected by change of address or change of Assessing Officer etc. However, any change in the PAN database (i.e. details provided at the time of obtaining PAN) should be intimated to the Income Tax Department by furnishing the details in the form for “Request For New PAN Card Or/ And Changes or Correction in PAN Data”.                                    
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it19" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it19">How to Check the status of Aadhar PAN linking?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        You can check your Aadhaar-PAN Linking status from the following link: <a href ="https://www1.incometaxindiaefiling.gov.in/e-FilingGS/Services/AadhaarPreloginStatus.html">https://www1.incometaxindiaefiling.gov.in/e-FilingGS/Services/AadhaarPreloginStatus.html</a>
+                                    </div>    
+                                  </section>
+                                  <input type="radio" name="accordion" id="it20" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it20">How to get area code for my allotment of PAN?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        It is mandatory to provide the AO Code while applying for PAN and TAN. AO Code (i.e., Area Code, AO Type, Range Code and AO Number) of the Jurisdictional Assessing Officer must be filled up by the applicant. These details can be obtained from following links  :
+                                    </div>
+                                  </section>
+                                  <input type="radio" name="accordion" id="it21" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it21">What is E-PAN?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        E-PAN is the PAN provided in PDF format rather than physical card. The E-PAN card in PDF format will be sent to e-mail ID mentioned in PAN application form. If the physical PAN Card is not required, then PAN applicant will have to indicate at the time of submission of PAN application. In such cases, Email ID will be mandatory & E-PAN Card will be sent to the PAN applicant at the email ID. Physical PAN Card will not be dispatched in such cases. Charges for E-PAN card is different from physical PAN card
+                                    </div>                                        
+                                  </section>
+                                  <input type="radio" name="accordion" id="it22" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it22">Who is an Assessing Officer?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        He/She is an officer of the Income-tax Department who has been given jurisdiction over a particular geographical area in a city/town or over a class of persons. You can find out from the PRO or from the Departmental website http://www.incometaxindia.gov.in about the officer administering the law which could be based on your geographical jurisdiction or the nature of income earned by you. One can also before section section 2(7A) of Income tax Act
+                                    </div>                                        
+                                  </section>
+                                  <input type="radio" name="accordion" id="it23" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it23">Please give me the e-mail id of Income Tax ombudsperson?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        Please see the following link to check the list of Email Id of income tax ombudsman: https://www.incometaxindia.gov.in/Pages/ombudsman/know-your-ombudsman.aspx
+                                    </div>    
+                                  </section>
+                                  <input type="radio" name="accordion" id="it24" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it24">Is my responsibility under the Income Tax Act over once taxes are paid?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        No, you are thereafter responsible for ensuring that the tax credits are available in your tax credit statement and TDS/TCS certificates received by you and that full particulars of income and tax payment are submitted to the Income-tax Department in the form of Return of Income which is to be filed before the due date prescribed in this regard.
+                                    </div>                                        
+                                  </section>
+                                  <input type="radio" name="accordion" id="it25" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it25">What is the due date for filing Tax Audit Report?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        30th September is the due date for the assessees not having international transactions or specified domestic transactions;<br> 
+                                        31st October is the due date for the assessees having international transactions or specified domestic transactions;
+                                  </section>
+                                  <input type="radio" name="accordion" id="it26" />
+                                  <section class="box">
+                                    <label class="box-title question-color" for="it26">What is the penalty for not filing Income Tax Return before due date?</label>
+                                    <label class="box-close" for="acc-close"></label>
+                                    <div class="box-content answer-color">
+                                        If, total income exceeds Rs 5 lakhs, then penalty payable is Rs. 5,000; <br>
+                                        If, total income is less than Rs 5 lakhs, then penalty payable is Rs. 1,000; <br>
+                                    </div>    
+                                    </section>
+                                    <input type="radio" name="accordion" id="it27" />
+                                    <section class="box">
+                                      <label class="box-title question-color" for="it27">What is the interest liability for delay in filing ITR?</label>
+                                      <label class="box-close" for="acc-close"></label>
+                                      <div class="box-content answer-color">
+                                        If you do not file income tax returns on or before the due date, you would be required to pay interest at the rate of 1% for every month, or part of a month, on the amount of tax remaining unpaid as per section 234A. <br>
+                                        The calculation of interest will start from the date immediately after the due date, which is usually 31 July of the relevant assessment year.                                
+                                      </div>   
+                                    </section>
+                                    <br><br>
+                                    <header class="box">
+                                        <label for="acc-close" class="box-title-category" style="font-family: 'Inter', League Spartan;font-size: 25px;color: #1167AF"><b>Startups</b></label>
+                                    </header>
+                                    <input type="radio" name="accordion" id="st1" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st1">Is my startup eligible for registration?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Eligibility Criteria for Startup Recognition:
+                                            <ul>
+                                                <li>The Startup should be incorporated as a private limited company or as a partnership firm or a limited liability partnership.</li>
+                                                <li>Turnover should be less than INR 100 Crores in any of financial years since incoporation.</li>
+                                                <li>An entity should be incorporated as a startup up to 10 years from the date of its incorporation.</li>
+                                                <li>The Startup should be working towards innovation/ improvement of existing products, services and processes and should have the potential to generate employment/ create wealth. </li>
+                                            </ul>
+                                            Note: An entity formed by splitting up or reconsutrction of an existing business shall not be considered a "Startup".                            
+                                        </div>
+                                    </section>
+                                    <input type="radio" name="accordion" id="st2" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st2">Is it mandatory to register a startup?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Yes, it is important to register a Startup in India.<br>
+                                            Below are the steps that you need to follow for registering your startup.
+                                            <ol>
+                                               <li>Incorporate your Business</li>
+                                               <li>Register with Startup India</li>
+                                               <li>Get DPIIT Recognition</li>
+                                               <li>Recognition Application</li>
+                                               <li>Documents for Registration</li> 
+                                               <li>Recognition Number</li>
+                                            </ol>
+                                        </div>
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st3" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st3">What is the tax exemption that a startup could get?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            After registering as s startup, you can apply for Tax exemption under section 80IAC of the Income Tax Act.
+                                            The Startup can avail tax holiday for 3 consecutive financial years out of its first ten years since incorporation.
+                                        </div>
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st4" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st4">Eligibility Criteria for applying to Income Tax exemption (801AC)</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            The entity should be a recognized Startup. Only Private limited or a Limited Liability Partnership is eligible for Tax exemption under Section 80IAC. The Startup should have been incorporated after 1st April, 2016.</div>
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st5" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st5">What are the benefits of registering a startup?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            80IAC tax exemption
+                                            <ul>
+                                                <li>Tax Exemption under Section 56 of the Income Tax Act (Angel Tax)</li>
+                                                <li>Self-certification and no inspection for three years.</li>
+                                                <li>Concession in Trademark filings fees</li>
+                                                <li>Preference in Government tenders</li>
+                                                <li>Funding Support by government</li>
+                                            </ul>
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st6" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st6">Why does your startup need funding?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            80IAC tax exemption
+                                            <ul>
+                                                <li>Tax Exemption under Section 56 of the Income Tax Act (Angel Tax)</li>
+                                                <li>Self-certification and no inspection for three years.</li>
+                                                <li>Concession in Trademark filings fees</li>
+                                                <li>Preference in Government tenders</li>
+                                                <li>Funding Support by government</li>
+                                            </ul>
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st7" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st7">What are the available sources of funding?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            A startup can either go for equity financing, debt financing or funding in the form of grants.<br>
+                                            <b><u>Equity financing</u></b><br> 
+                                            Equity financing involves selling a portion of equity in return for funds. It does not have to be repaid. Startups have to give up a portion of their ownership to the investor. Equity Investors prefer to involve in the decision-making process.<br>
+                                            <b><u>Debt Financing</u></b><br>
+                                            It is borrowing of money and paying it back with interest. The funds are to be repaid within a stipulated time frame with interest.  The startup may need to provide a business asset as collateral. Debt Fund has very less involvement in decision-making.<br>
+                                            <b><u>Grants</u></b><br>
+                                            A grant is an award, usually financial, given by an entity to a startup to facilitate a goal or incentivize performance. There is no component of repayment of the grants. The grant provider has no involvement in decision making.                                        
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st8" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st8">What are the sources of raising equity financing?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Equity finacing can be raised from angel investors, venture capital firms or incubators/accelerators.<br>
+                                            <b><u>Angel Investors</u></b><br>
+                                            Angel investors are individuals who invests in exchange of equity stake in the startup.<br>  
+                                            <b><u>Venture capital firms</u></b><br>
+                                            Venture capital firms are a group of investors who invest in businesses they think will grow at a rapid pace. They invest a larger sum of money into businesses and receive a larger stake in the company compared to angel investors. <br>
+                                            <b><u>Incubator/Accelerators</u></b><br>
+                                            Incubators/Accelerators are like a parent to a child, who nurture the business providing necessary tools, training and network to a startup.                                            
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st9" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st9">Are there any government schemes for startups?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            <b><u>Startup India Seed Fund</u></b><br>
+                                            A startup applicant can avail seed support in the form of grant and debt/convertible debentures each once as per the guidelines of the scheme. A startup can avail up to Rs. 20 Lakhs as grant for validation of Proof of Concept, or prototype development, or product trials or Up to Rs. 50 Lakhs of investment for market entry, commercialization, or scaling up through convertible debentures.<br>
+                                            <b><u>Standup India Loan</u></b><br>
+                                            The objective of this scheme is to facilitate loans between 10 lakhs and 1 Crores to atleast one Scheduled Caste or Sheduled Tribe borrower and atleast one woman borrower per bank branch for setting up enterprise.<br>
+                                            <b><u>Pradhan Mantri Mudra Yojana (PMMY)</u></b><br>
+                                            The government has introduced this scheme to support small businesses in India. The MUDRA banks provide startup loans of up to INR 10 lakhs to small enterprises, business, which are non-corporate, and non-farm small/micro-enterprises.<br>
+                                            <b><u>Credit Guarantee Fund Trust for Micro and Small Entreprises (CGTMSE)</u></b><br>
+                                            This scheme provide business loans to micro-level businesses, small-scale industries, and startups with zero collateral. It allows businesses to avail loans at highly subsidized interest rates without requiring security.<br>
+                                            <b><u>High Risk - High Reward Research</u></u></b><br>
+                                            The High Risk and High Reward Research is a scheme launched by the Indian government to support and invite new proposals and ideas that have the potential to usher a paradigm shifting influence on the Science and Technology domains
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st10" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st10">What are the various stages of funding?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            <b><u>Pre-Seed Stage</u></b><br>                   
+                                            This stage of Funding is for the initial phases of the business when the startup has probably not even begun its operations.<br>
+                                            <b><u>Seed Stage</u></b><br>
+                                            The owners try to raise seed funds in order to conduct market research so as to know their target customers' tastes and preferences.<br>
+                                            <b><u>Series A</u></b><br>
+                                            At this point, the startup should have a product or service created and have a set customer base with a reliable income stream. <br>
+                                            <b><u>Series B</u></b><br>
+                                            This is the expansion stage of the business, which also involves the expansion of the customer base, employees and management team of the company.<br>
+                                           <b><u>Series C</u></b><br>
+                                            This round is raised to create new products and reach new markets.                                            
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st11" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st11">What documents are required to set up a Pvt. Ltd. company in India?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            You need to arrange very simple documents of directors like photographs, PAN Card and one address proof
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st12" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st12">Do have to have office (commercial) space to start a Company?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            No, commercial office space is not required. You can show your own residential or rented home address as the registered office address of the Company. This office address can be changed at any time after incorporation of the company. Once your startup is set up, stable and ready to move on to a nice corporate space you can change the registered office address by informing to the ROC office
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st13" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st13">Do I have to physically visit ROC office while setting up company?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            No. JJ Tax provides a complete online Company Incorporation process. All legal documentation with ROC and visits are done by JJ Tax
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st14" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st14"> Is Private Limited Incorporation to be renewed every year?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            No. Once the company is formed, it will be valid till it is officially closed down by the owners. No renewal or fees is required. However, every year companies have to file very basic returns with ROC office
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st15" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st15"> What is capital of the Company?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Capital means investment made by shareholders into the company. Authorised capital is an amount up to which company can issue shares. This capital is mentioned during incorporation of the company based on which ROC registration fees and stamp duty is paid. Paid up capital is an actual investment which goes from shareholders into company bank account, against which share certificate is issue by the company.                                            
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st16" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st16">Do we have to deposit Share Capital in a Bank at the time of Incorporation?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            No. After company is registered, it need to open a company bank account and then anytime within two months of incorporation, capital can be deposited into Company bank account.
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st17" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st17">How many people are required to incorporate an LLP?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            A Limited Liability Partnership must have a minimum of two Partners and an LLP can have any number of Partners
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st18" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st18">How much capital is required to start a Limited Liability Partnership?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            An LLP can be started with any amount of money there is no such minimum requirement. A partner may contribute both tangible and intangible property.
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st19" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st19">How long does it take to incorporate an LLP?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            The time taken for incorporation depends on the submission of relevant documents by the client as well as the Approvals from the Government authorities. IndiaFilings can help you Incorporate an LLP in 14-20 days.
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st20" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st20">Do LLPs allow Foreign Direct Investment (FDI)?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            FDI is allowed under automated route in an LLP by the Foreign Investments Promotion Board (FIPB). Note: Foreign Institutional Investors and Foreign Capital Investors are not allowed to invest in LLPs.
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st21" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st21">Is it possible for an LLP to raise funds?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            An LLP cannot raise funds from the public in any form. In an LLP only partners can contribute their capital and the liability of the Partners is limited to the extent of their contribution.
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st22" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st22">Is MSME registration updated to Udyam Registration?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Yes, MSME registration, i.e. Udyog Aadhaar Registration has been replaced with Udyam Registration. If any micro, small and medium industries want to start any business, they can obtain the MSME/Udyam Registration. The MSME/Udyam registration is completely online. This registration provides the business with a lot of benefits and subsidies
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st23" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st23">Is the MSME registration compulsory?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            No. The enterprises that come under the MSME category need not mandatorily apply for MSME registration. However, it is better to obtain MSME/Udyam registration as the government provides a lot of benefits in terms of loan facilities, easy access to credit, low-interest rates, eligibility to many schemes, etc., to the enterprises that have MSME registration.
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st24" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st24">Is Aadhar card compulsory?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Yes. For obtaining Udyam registration, an Aadhaar card is compulsory. In case an applicant is other than the proprietor, the Aadhaar card of the partner and the director will be required.       
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st25" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st25">What is the validity of the MSME registration certificate?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            There is no expiry of the Udyam Registration Certificate. As long as the entity is ethical and financially healthy there will be no expiry of the certificate.
+                                        </div>    
+                                    </section>                                    
+                                    <input type="radio" name="accordion" id="st26" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="st26">Do I need multiple registrations for manufacturing plants in different cities?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            No. The MSME/Udyam Registration Certificate is for a single entity irrespective of multiple branches or plants. However, information about multiple branches or plants must be furnished
+                                        </div>    
+                                    </section>    
+                                    <br><br>
+                                    <header id="gst" class="box">
+                                       <label for="acc-close" class="box-title-category" style="font-family: 'Inter', League Spartan;font-size: 25px;color: #1167AF"><b>GST</b></label>
+                                    </header>
+                                    <input type="radio" name="accordion" id="gst1" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst1"> When I have to Register under GST?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Every Supplier of Goods or services or both is required to obtain registration in the State or the Union territory from where he makes the taxable supply if his aggregate turnover exceeds specified threshold limit in a FY.                                            
+                                        </div>
+                                    </section>
+                                    <input type="radio" name="accordion" id="gst2" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst2">General Documents required for GST registration</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            <ol>
+                                                <li>Proof of Constitution of Business</li>
+                                                <li>Photo of Stakeholder( Promoter/Partner/ propietor)</li>
+                                                <li>Photo of the authorised Signatory</li>
+                                                <li>Proof of Appointment of Authorised Signatory</li>
+                                                <li>Proof of Principal Place of business</li> 
+                                             </ol>                                            
+                                        </div>
+                                    </section>                                  
+                                    <input type="radio" name="accordion" id="gst3" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst3">When to apply for Registration?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Within 30 days from the date on which he becomes liable for registration                                            
+                                        </div>
+                                    </section>                                  
+                                    <input type="radio" name="accordion" id="gst4" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst4">In how many Days will get my GST Registration no?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Proper Officer examines the application and accompanying documents and If same are found in order then within 7 working days from the date of submission of application without site verification if applicant successfully validates his Aadhaar authentication. 
+                                            In case where applicant fails to undergo/ does not opt for Aadhaar authentication or PO deems it fit to carry out site verification, registration is granted within 30 days of application after verification of site & prescribed documents
+                                        </div>
+                                    </section>                                  
+                                    <input type="radio" name="accordion" id="gst5" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst5">I don't have any sales or purchases, do I still have to file GST returns</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Yes. You have to file Nil GST returns even if you don't have any sales or purchases.                                        
+                                        </div>
+                                    </section>                                  
+                                    <input type="radio" name="accordion" id="gst6" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst6">What is the due date for payment of GST?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            General(Non- QRMP Scheme): 20th Day of next month;<br>
+                                            General(QRMP Scheme): 25th Day of next month;  <br>
+                                            Composition: 18th Day of next month of Quarter;<br>
+                                            Non-Resident Taxable Person: 20th Day of next month;<br>
+                                            Input Service Distributor: 13th Day of next month;<br>
+                                            TDS Deductor: 10th Day of next month;<br>
+                                            TCS Collector: 10th Day of next month;<br>
+                                        </div>
+                                    </section>                                  
+                                    <input type="radio" name="accordion" id="gst7" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst7">What is the late fees for Non filing of GST returns?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            For NIL GST returns---Rs. 20 per day (Rs. 10 under CGST Act and Rs. 10 under SGST Act) <br>
+                                            For other cases---Rs. 50 per day in other cases (Rs. 25 under CGST Act and Rs. 10 under SGST Act).
+                                        </div>
+                                    </section>                                  
+                                    <input type="radio" name="accordion" id="gst8" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst8">How many types of Challans are available under the GST regime?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            There is single challan prescribed for all taxes, fees, penalty, interest, and other payments to be made under the GST regime
+                                        </div>
+                                    </section>                                  
+                                    <input type="radio" name="accordion" id="gst9" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst9">How many Challans can I save at one time?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            You can save a maximum of 10 challans on the GST portal at any point in time
+                                        </div>
+                                    </section>        
+                                    <input type="radio" name="accordion" id="gst10" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst10">What is the validity period for a saved Challan?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            The validity period for saved Challan is 7 days
+                                        </div>
+                                    </section>        
+                                    <input type="radio" name="accordion" id="gst11" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst11">I have applied for registration on a voluntarily basis. Can I apply for cancellation of registration?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Yes. You can apply for cancellation of registration any time
+                                        </div>
+                                    </section>        
+                                    <input type="radio" name="accordion" id="gst12" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst12">Who can apply for Cancellation?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            The cancellation can either be initiated by the Department on their own motion or the registered person can apply for cancellation of their registration.
+                                        </div>
+                                    </section>        
+                                    <input type="radio" name="accordion" id="gst13" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst13">Can I revoke my GST registration cancelled by the proper Officer?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Where the registration of a person is cancelled suo-motu by the proper officer, such registered person may apply for revocation of the cancellation to such proper officer, within 30 days from the date of service of the order of cancellation of registration.
+                                        </div>
+                                    </section>        
+                                    <input type="radio" name="accordion" id="gst14" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst14">I have applied for LUT and ARN has also generated however certificate yet to be received. By when I will get the LUT certificate?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            You can view and download the LUT filed by you by following these steps: <br>
+                                            <ol>
+                                                <li>Login to the GST Portal with valid credentials. </li>
+                                                <li>Click the Services > User Services > View My Submitted LUTs command.</li>
+                                                <li>Select Period to display list of LUT </li>
+                                                <li>Select the ARN from the list of LUT </li>
+                                                <li>Click on view to open up the LUT filed</li>
+                                                <li>Click on download button given at the end of page.</li>
+                                            </ol> 
+                                        </div>
+                                    </section>        
+                                    <input type="radio" name="accordion" id="gst15" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst15">I am getting an error at the time of filing LUT. What should do?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            Please ensure that while filing LUT, you correctly select the F.Y and enter the details in all the mandatory tables and tick and select against all the required choices in the form.<br>
+                                            If the error persists, follow the steps below: <br>
+                                            Step 1: Clear the cookies and history of browser or after changing the browser. <br>
+                                            Step 2: If issue persists please raise the grievance over the grievance redressal portal with Link:https://selfservice.gstsystem.in/.
+                                        </div>
+                                    </section>        
+                                    <input type="radio" name="accordion" id="gst16" />
+                                    <section class="box">
+                                        <label class="box-title question-color" for="gst16">Can a taxpayer raise request from GST Portal to enable LUT?</label>
+                                        <label class="box-close" for="acc-close"></label>
+                                        <div class="box-content answer-color">
+                                            If LUT Processing Officer has disabled the furnishing of LUT for some taxpayer, then to get it enabled, taxpayer has to communicate this request to LUT Processing Officer manually. From GST Portal, taxpayer cannot raise the request to enable furnishing of LUT.                                            
+                                        </div>
+                                    </section>        
+                                    <br><br>
+                                    <header class="box">
+                                        <label for="acc-close" class="box-title-category" style="font-family: 'Inter', League Spartan;font-size: 25px;color: #1167AF"><b>TDS</b></label>
+                                     </header>
+                                     <input type="radio" name="accordion" id="tds1" />
+                                     <section class="box">
+                                         <label class="box-title question-color" for="tds1">What is the due date for filing TDS returns?</label>
+                                         <label class="box-close" for="acc-close"></label>
+                                         <div class="box-content answer-color">
+                                            Due dates for filing TDS returns:<br>
+                                            <div class="row">
+                                                <div class="col">
+                                                    Quarter          
+                                                </div>
+                                                 <div class="col">
+                                                    Date        
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    Apr- Jun          
+                                                </div>
+                                                <div class="col">
+                                                    July 31        
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    July- Sep          
+                                                </div>
+                                                <div class="col">
+                                                    Oct 31
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    Oct- Dec
+                                                </div>
+                                                <div class="col">
+                                                    Jan 31
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    Jan- Mar
+                                                </div>
+                                                <div class="col">
+                                                    May 31
+                                                </div>
+                                            </div>                            
+                                         </div>
+                                     </section>
+                                     <input type="radio" name="accordion" id="tds2" />
+                                     <section class="box">
+                                         <label class="box-title question-color" for="tds2">What is the time limit to deposit TDS?</label>
+                                         <label class="box-close" for="acc-close"></label>
+                                         <div class="box-content answer-color">
+                                            <div class="row">
+                                                <div class="col">
+                                                    Deductor          
+                                                </div>
+                                                <div class="col">
+                                                    Due date of depositing tax deducted        
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                 <div class="col">
+                                                    Government, other deductor (April - Feb)          
+                                                 </div>
+                                                 <div class="col">
+                                                    7th of the succeeding month
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                 <div class="col">
+                                                    Government, other deductor (March)
+                                                </div>
+                                                <div class="col">
+                                                    Government      -  April 7 
+                                                 </div>
+                                             </div>
+                                             <div class="row">
+                                                 <div class="col">
+                                                    Government, other deductor (March)
+                                                 </div>
+                                                 <div class="col">
+                                                    Other employer -  April 30
+                                                </div>
+                                            </div>
+                                         </div>   
+                                     </section>
+                                     <input type="radio" name="accordion" id="tds3" />
+                                     <section class="box">
+                                         <label class="box-title question-color" for="tds3">What is the interest for delay in payment/ deduction in TDS?</label>
+                                         <label class="box-close" for="acc-close"></label>
+                                         <div class="box-content answer-color">
+                                            <div class="row">
+                                                <div class="col">
+                                                    Deductor          
+                                                </div>
+                                                <div class="col">
+                                                    Due date of depositing tax deducted        
+                                                  </div>
+                                              </div>
+                                              <div class="row">
+                                                 <div class="col">
+                                                    Government, other deductor (April - Feb)          
+                                                 </div>
+                                                 <div class="col">
+                                                    7th of the succeeding month
+                                                   </div>
+                                              </div>
+                                             <div class="row">
+                                                 <div class="col">
+                                                    Government, other deductor (March)
+                                                 </div>
+                                                 <div class="col">
+                                                    Government      -  April 7 
+                                                 </div>
+                                             </div>
+                                             <div class="row">
+                                                 <div class="col">
+                                                    Government, other deductor (March)
+                                                 </div>
+                                                 <div class="col">
+                                                    Other employer -  April 30
+                                                 </div>
+                                             </div>                                            
+                                         </div>   
+                                     </section>
+                                     <input type="radio" name="accordion" id="tds4" />
+                                     <section class="box">
+                                         <label class="box-title question-color" for="tds4">What is the late fee on TDS return filing?</label>
+                                         <label class="box-close" for="acc-close"></label>
+                                         <div class="box-content answer-color">
+                                            Where a person fails to file the TDS return on or before the due date prescribed in this regard, then he shall be liable to pay, by way of fee, a sum of Rs. 200 for every day during which the failure continues.
+                                         </div>   
+                                     </section>
+                                     <input type="radio" name="accordion" id="tds5" />
+                                     <section class="box">
+                                         <label class="box-title question-color" for="tds5">What is the penalty for filing incorrect/ non filing TDS return?</label>
+                                         <label class="box-close" for="acc-close"></label>
+                                         <div class="box-content answer-color">
+                                            Minimum penalty of Rs. 10,000 and maximum penalty of up to Rs. 1,00,000 can be levied, if the deductor/collector does not file a TDS/TCS return or files an incorrect TDS/TCS return.
+                                         </div>   
+                                     </section>
+                                  <input type="radio" name="accordion" id="acc-close" />
+                                </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+            <footer   style="background-color: #053757;">
+                <div class="container py-5">
+                  <div class="row display:flex">
+                    <div class="col" >
+                      <form action="https://submit-form.com/opqN35DN">
+                        <input type="hidden" name="_redirect" value="https://blog.jjfintax.com/archive" />
+                        <div class="control d-flex justify-content-center">
+                            <input type="email" id="email" name="email" aria-label="email" 
+                                placeholder="name@example.com" required="required" style="width:290px; height:51px;border-radius: 7px; font-family: 'Inter', Poppins;font-size: 20px;color:#cdcdcd; text-align: center;">
+                        </div>
+                        <div class="control d-flex justify-content-center" style="padding-top: 0.75rem;">
+                            <button align="center" class="footer-input" type="submit" style="width:290px; height:51px;border-radius: 7px;font-family: 'Inter', Poppins;font-size: 20px; border-color: #6aa9d5;background-color: #6aa9d5; color: #ffffff;">
+                              Stay Updated
+                            </button>
+                        </div>
+                      </form>
+                      <p align="center" class="is-size-7" style="padding-top: 0.25rem; color:white">
+                          Two insightful newsletter every week.
+                      </p>
+                      <div>
+                        <a href="https://play.google.com/store/apps/details?id=com.jjtax.app"><img src="./public/img/playstore.png" width="129px" height="52.5px" alt="JJ Tax APP/Play Store"></a>
+                        <a href="https://jjtax.onelink.me/LXJ6/a8575660"><img src="./public/img/appstore.png" width="133.5px" height="52.5px" alt="JJ Tax APP/App Store"> </a>
+                    </div>    
+                    </div>
+                    <div class="col">
+                      <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>Services</b></h5>
+                      <ul class="list-unstyled">
+                        <li class="footer-font-info"><a class="active-link" href="#">Income Tax</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">GST</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">TDS</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Tax Planning</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Accounting</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Startup Service</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">ROC Compliances</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Wealth Management</a></li>
+                      </ul>
+                    </div>              
+                    <div class="col">
+                      <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff; padding-left: 16px;"><b>Other Services</b></h5>
+                      <ul class="list-unstyled">
+                        <li class="footer-font-info"><a class="active-link" href="#">Legal Services</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Firm Incorporation</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">HRA Calculator</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">NRI Services</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">DSC</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Reply to Notice</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">PAN</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Aadhar-PAN link</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">RBI/FEMA compliances</a></li>
+                      </ul>
+                    </div>
+                    <div class="col" >
+                      <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>Company</b></h5>
+                      <ul class="list-unstyled">
+                        <li class="footer-font-info"><a class="active-link" href="aboutus.html">About Us</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="awards.html">Media</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Finmag</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a></li>
+                        <li class="footer-font-info"><a class="footer-font-info"><a class="active-link" href="investor.html">Investor Relations</a></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h5 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>Other Links</b></h5>
+                      <ul class="list-unstyled">
+                        <li class="footer-font-info"><a class="active-link" href="faq.html">FAQs</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="tandc.html">T&C</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="privpolicy.html">Privacy Policy</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#">Gallery</a></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h6 style="font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;padding-left: 16px;"><b>JJ Capsule</b></h5>
+                      <ul class="list-unstyled">
+                        <li class="footer-font-info"><a class="active-link" href="https://blog.jjfintax.com">Blogs</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="news.html">News & Updates</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="taxcalendar.html">Tax Calendar</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="taxtips.html">Tax Tips</a></li>
+                        <li class="footer-font-info"><a class="active-link" href="pricing.html"><b>Pricing</b></a></li>
+                        <li class="footer-font-info"><a class="active-link" href="#" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact Us</a>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+    </body>
+</html>
