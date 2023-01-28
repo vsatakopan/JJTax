@@ -372,8 +372,8 @@
         {
 	      position: relative;
 	      background: white;
-          height: 80px;
-          transition: all .15s ease-in-out;
+        height: auto;
+        transition: all .15s ease-in-out;
         }
         .box::before 
         {
@@ -385,6 +385,7 @@
           left: 0;
           right: 0;
           pointer-events: none;
+          border-color:#1167AF;
           box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
         }
         header.box 
@@ -405,10 +406,16 @@
         }
         .box-title 
         {
-           width:auto;
-           height: 64px;
+	        padding: 30px 20px;
+	        font-size: 11pt;
+	        color: rgba(0,0,0,.54);
+	        /*display: none;*/
+
+
+          width: calc(100% - 20px);
+           /*height: 64px;
 	         line-height: 64px;
-	         padding: 0 20px;
+	         padding: 0 20px;*/
 	         display: inline-block;
 	         cursor: pointer;
 	         -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
@@ -435,7 +442,7 @@
         .box-close 
         {
 	      position: absolute;
-	      height: 64px;
+	      height: 175px;
 	      width: 100%;
 	      top: 0;
 	      left: 0;
@@ -444,13 +451,13 @@
         }
         input:checked + .box 
         {
-	      height: auto;
-	      margin: 16px 0;
+	       height: auto;
+	       margin: 16px 0;
          box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
         }
         input:checked + .box .box-title 
         {
-	      border-bottom: 1px solid rgba(0,0,0,.18);
+  	      border-bottom: 1px solid rgba(0,0,0,.18);
           color:#1167AF;
         }
         input:checked + .box .box-content,
@@ -458,7 +465,7 @@
         {
 	        display: inline-block;
         }
-        .arrows section .box-title 
+        /*.arrows section .box-title`
         {
 	      padding-left: 44px;
 	      width: calc(100% - 64px);
@@ -473,17 +480,34 @@
 	      top: -2px;
 	      transition: transform .15s ease-in-out;
 	      color: #000000;
-        }   
+        }*/
+        .section .box-title 
+        {
+	      padding-left: 44px;
+	      width: calc(100% - 64px);
+        }
+        .section .box-title:before 
+        {
+	      position: absolute;
+	      display: block;
+	      content: '\203a';
+	      font-size: 18pt;
+	      left: 20px;
+	      top: -2px;
+	      transition: transform .15s ease-in-out;
+	      color: #000000;
+        }
         input:checked + section.box .box-title:before 
         {
+          width: calc(100% - 20px);
 	        transform: rotate(90deg);
-            color:#1167AF;
+          color:#1167AF;
         }
         .question-color
         {
            color: #4A4B4E;
            font-family: 'Inter', League Spartan;
-           font-size:15px;	
+           font-size:18px;	
         }
         .answer-color
         {
@@ -497,6 +521,12 @@
           font-size: 18px;
           color: #ffffff;
           padding-left: 20px;
+        }
+        label 
+        {
+          display:block;
+          font-weight:bold;
+          margin:5px 0;
         }
     </style>
 </head>    
@@ -758,10 +788,10 @@
               </div>  
             </div>    
           </div>
-          <div class="w-100 section-two-bg-gst">
+          <div class="w-100 section-two-bg-gst img-fluid">
             <div class="container">
               <div class="row display:flex">
-                <div class="col-sm-6">
+                <div class="col col-sm-6 col-md-6 col-lg-6 col-xl-6">
                    <div class="gst-ret-text" style="margin-top: 100px;margin-left: 50px;">
                       GST Return Filing
                     </div>
@@ -772,7 +802,7 @@
                     Affordable plans specially curated to meet every business' requirements. Explore Now! 👋🏻
                   </div>
                 </div>  
-                <div class="col-sm-6">
+                <div class="col col-sm-6 col-md-6 col-lg-6 col-xl-6">
                   <div class="rec-plans-text" style="margin-top:100px;margin-left:310px;" >
                     Recommended Plans  
                   </div>
@@ -881,8 +911,8 @@
           <div class="w-75 mx-auto">
             <div class="container">
               <div class="row display:flex">
-                   <div class="col-sm-6">
-                    <div class="section-four-know-gst" style="margin-top:25px" >
+                   <div class="col col-sm-6 col-md-6 col-lg-6 col-xl-6 px-0">
+                    <div class="section-four-know-gst" style="margin-top:25px;" >
                       Know More about GST
                     </div>  
                     <div style="padding-left: 10px;font-family: 'League Spartan';font-style: normal;font-weight: 600;font-size: 25px;line-height: 35px;color: #6AA9D5;">
@@ -895,8 +925,8 @@
                         > Surrender of Registration<br>
                      </div>
                   </div>  
-                <div class="col-sm-6" >
-                  <div class="section-four-box-gst" style="margin-left:7.3rem;">
+                <div class="col col-sm-6 col-md-6 col-lg-6 col-xl-6 px-0" >
+                  <div class="section-four-box-gst">
                     <span style="width: 544px;height: 40px;left: 795px;top: 1526px;font-family: 'League Spartan';font-style: normal;font-weight: 700;font-size: 30px;line-height: 30px;display: flex;align-items: center;text-align: center;color: #FFFFFF;padding-left: 30px;margin-top:50px;">Hassle-free filling, done by experts.</span>
                     <span style="width: 436.83px;height: 54px;left: 848.07px;top: 1577px;font-family: 'League Spartan';font-style: normal;font-weight: 500;font-size: 15px;line-height: 30px;text-align: center;color: #C3E7FF;padding-left: 60px;">In search of experts who can manage your GST compliances?</span>
                     <span style="width: 436.83px;height: 54px;left: 848.07px;top: 1577px;font-family: 'League Spartan';font-style: normal;font-weight: 500;font-size: 15px;line-height: 30px;text-align: center;color: #C3E7FF;padding-left: 60px;margin-top: 10px;">Get in touch with our CAs and ease your compliance burden</span>
@@ -913,10 +943,10 @@
               </div>               
             </div>            
           </div>          
-          <div class="w-75 p-3 section-five-bg-gst mx-auto" style="display:flex;align-items:center;">
+          <div class="w-75 p-3 section-five-bg-gst mx-auto"  style="display:flex;">
             <div class="container">
               <div class="row display:flex">
-                <div class="col-sm-12" style="margin-top:5rem;">
+                <div class="col" style="margin-top:5rem;">
                     <nav class="accordion arrows">
                         <header class="box">
                           <label for="acc-close" class="box-title-category" style="font-family: 'Inter', League Spartan;font-size: 25px;color: #1167AF" style="text-align: center;"><b>People Also Ask</b></label>

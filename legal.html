@@ -439,8 +439,8 @@
         {
 	      position: relative;
 	      background: white;
-          height: 80px;
-          transition: all .15s ease-in-out;
+        height: auto;
+        transition: all .15s ease-in-out;
         }
         .box::before 
         {
@@ -452,6 +452,7 @@
           left: 0;
           right: 0;
           pointer-events: none;
+          border-color:#1167AF;
           box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
         }
         header.box 
@@ -472,10 +473,16 @@
         }
         .box-title 
         {
-           width:auto;
-           height: 64px;
+	        padding: 30px 20px;
+	        font-size: 11pt;
+	        color: rgba(0,0,0,.54);
+	        /*display: none;*/
+
+
+          width: calc(100% - 20px);
+           /*height: 64px;
 	         line-height: 64px;
-	         padding: 0 20px;
+	         padding: 0 20px;*/
 	         display: inline-block;
 	         cursor: pointer;
 	         -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
@@ -502,7 +509,7 @@
         .box-close 
         {
 	      position: absolute;
-	      height: 64px;
+	      height: 175px;
 	      width: 100%;
 	      top: 0;
 	      left: 0;
@@ -511,13 +518,13 @@
         }
         input:checked + .box 
         {
-	      height: auto;
-	      margin: 16px 0;
+	       height: auto;
+	       margin: 16px 0;
          box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
         }
         input:checked + .box .box-title 
         {
-	      border-bottom: 1px solid rgba(0,0,0,.18);
+  	      border-bottom: 1px solid rgba(0,0,0,.18);
           color:#1167AF;
         }
         input:checked + .box .box-content,
@@ -525,7 +532,7 @@
         {
 	        display: inline-block;
         }
-        .arrows section .box-title 
+        /*.arrows section .box-title`
         {
 	      padding-left: 44px;
 	      width: calc(100% - 64px);
@@ -540,23 +547,53 @@
 	      top: -2px;
 	      transition: transform .15s ease-in-out;
 	      color: #000000;
-        }   
+        }*/
+        .section .box-title 
+        {
+	      padding-left: 44px;
+	      width: calc(100% - 64px);
+        }
+        .section .box-title:before 
+        {
+	      position: absolute;
+	      display: block;
+	      content: '\203a';
+	      font-size: 18pt;
+	      left: 20px;
+	      top: -2px;
+	      transition: transform .15s ease-in-out;
+	      color: #000000;
+        }
         input:checked + section.box .box-title:before 
         {
+          width: calc(100% - 20px);
 	        transform: rotate(90deg);
-            color:#1167AF;
+          color:#1167AF;
         }
         .question-color
         {
            color: #4A4B4E;
            font-family: 'Inter', League Spartan;
-           font-size:15px;	
+           font-size:18px;	
         }
         .answer-color
         {
           color:#000000;
           font-family: 'Inter', League Spartan;
-          font-size:20px;	
+          font-size:15px;	
+        }
+        .footer-section-heading
+        {
+          font-family: 'Inter', League Spartan;
+          font-size: 18px;
+          color: #ffffff;
+          padding-left: 20px;
+        }
+        label 
+        {
+          display:block;
+          font-weight:bold;
+          margin:5px 0;
         }
         .footer-section-heading
         {
